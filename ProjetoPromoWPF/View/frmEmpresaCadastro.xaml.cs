@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjetoPromoWPF.View
 {
     /// <summary>
-    /// Interação lógica para pgLogin.xam
+    /// Lógica interna para frmEmpresaCadastro.xaml
     /// </summary>
-    public partial class pgLogin : Page
+    public partial class frmEmpresaCadastro : Window
     {
-        public pgLogin()
+        public frmEmpresaCadastro()
         {
             InitializeComponent();
         }
-        
     }
 }

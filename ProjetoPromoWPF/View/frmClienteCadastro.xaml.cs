@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjetoPromoWPF.View
 {
     /// <summary>
-    /// Interação lógica para pgTipoCadastro.xam
+    /// Lógica interna para frmClienteCadastro.xaml
     /// </summary>
-    public partial class pgTipoCadastro : Page
+    public partial class frmClienteCadastro : Window
     {
-        public pgTipoCadastro()
+        public frmClienteCadastro()
         {
             InitializeComponent();
         }

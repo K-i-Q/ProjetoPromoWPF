@@ -35,7 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,31 +66,55 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAL\ClienteDAO.cs" />
+    <Compile Include="DAL\EmpresaClienteDAO.cs" />
+    <Compile Include="DAL\EmpresaDAO.cs" />
+    <Compile Include="DAL\SingletonContext.cs" />
+    <Compile Include="Migrations\201909102321065_CriacaoBancoDeDados.cs" />
+    <Compile Include="Migrations\201909102321065_CriacaoBancoDeDados.Designer.cs">
+      <DependentUpon>201909102321065_CriacaoBancoDeDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909102324407_AddPropertySenhaCliente.cs" />
+    <Compile Include="Migrations\201909102324407_AddPropertySenhaCliente.Designer.cs">
+      <DependentUpon>201909102324407_AddPropertySenhaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Context.cs" />
+    <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\EmpresaCliente.cs" />
+    <Compile Include="View\frmCadastro.xaml.cs">
+      <DependentUpon>frmCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmClienteCadastro.xaml.cs">
+      <DependentUpon>frmClienteCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEmpresaCadastro.xaml.cs">
+      <DependentUpon>frmEmpresaCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLogin.xaml.cs">
+      <DependentUpon>frmLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\pgHome.xaml.cs">
-      <DependentUpon>pgHome.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\pgLogin.xaml.cs">
-      <DependentUpon>pgLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\pgTipoCadastro.xaml.cs">
-      <DependentUpon>pgTipoCadastro.xaml</DependentUpon>
-    </Compile>
+    <Page Include="View\frmCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\frmClienteCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\frmEmpresaCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\frmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Index.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgHome.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgTipoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,10 +133,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201909102321065_CriacaoBancoDeDados.resx">
+      <DependentUpon>201909102321065_CriacaoBancoDeDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909102324407_AddPropertySenhaCliente.resx">
+      <DependentUpon>201909102324407_AddPropertySenhaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,5 +152,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

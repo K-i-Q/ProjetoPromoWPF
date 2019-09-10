@@ -24,21 +24,6 @@ namespace ProjetoPromoWPF.View
             InitializeComponent();
             
         }
-
-        private void BtnLoginIndex_Click(object sender, RoutedEventArgs e)
-        {
-            fmMain.Content = new pgLogin();
-        }
-
-        private void BtnHomeIndex_Click(object sender, RoutedEventArgs e)
-        {
-            fmMain.Content = new pgHome();
-        }
-
-        private void BtnTipoCadastroIndex_Click(object sender, RoutedEventArgs e)
-        {
-
-            fmMain.Content = new pgTipoCadastro();
-        }
+        
     }
 }

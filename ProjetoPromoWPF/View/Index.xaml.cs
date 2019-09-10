@@ -15,30 +15,30 @@ using System.Windows.Shapes;
 namespace ProjetoPromoWPF.View
 {
     /// <summary>
-    /// Lógica interna para frmLogin.xaml
+    /// Lógica interna para Index.xaml
     /// </summary>
-    public partial class frmLogin : Window
+    public partial class Index : Window
     {
-        public frmLogin()
+        public Index()
         {
             InitializeComponent();
-        }
-
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            Home home = new Home();
-
-            home.Show();
-            this.Close();
-        }
-
-        private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
-        {
-            TipoCadastro tipoCadastro = new TipoCadastro();
-
-            tipoCadastro.Show();
-            this.Close();
             
+        }
+
+        private void BtnLoginIndex_Click(object sender, RoutedEventArgs e)
+        {
+            fmMain.Content = new pgLogin();
+        }
+
+        private void BtnHomeIndex_Click(object sender, RoutedEventArgs e)
+        {
+            fmMain.Content = new pgHome();
+        }
+
+        private void BtnTipoCadastroIndex_Click(object sender, RoutedEventArgs e)
+        {
+
+            fmMain.Content = new pgTipoCadastro();
         }
     }
 }

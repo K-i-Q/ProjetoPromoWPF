@@ -10,26 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjetoPromoWPF.View
 {
     /// <summary>
-    /// Lógica interna para TipoCadastro.xaml
+    /// Interação lógica para pgLogin.xam
     /// </summary>
-    public partial class TipoCadastro : Window
+    public partial class pgLogin : Page
     {
-        public TipoCadastro()
+        public pgLogin()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            frmLogin frmLogin = new frmLogin();
-
-            frmLogin.Show();
-            this.Close();
-        }
+        
     }
 }

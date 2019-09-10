@@ -55,28 +55,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="View\frmLogin.xaml.cs">
-      <DependentUpon>frmLogin.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
+    <Compile Include="View\Index.xaml.cs">
+      <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TipoCadastro.xaml.cs">
-      <DependentUpon>TipoCadastro.xaml</DependentUpon>
+    <Compile Include="View\pgHome.xaml.cs">
+      <DependentUpon>pgHome.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\frmLogin.xaml">
+    <Compile Include="View\pgLogin.xaml.cs">
+      <DependentUpon>pgLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgTipoCadastro.xaml.cs">
+      <DependentUpon>pgTipoCadastro.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\Index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Home.xaml">
+    <Page Include="View\pgHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TipoCadastro.xaml">
+    <Page Include="View\pgLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgTipoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

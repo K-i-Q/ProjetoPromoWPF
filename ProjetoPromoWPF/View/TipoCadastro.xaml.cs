@@ -15,30 +15,21 @@ using System.Windows.Shapes;
 namespace ProjetoPromoWPF.View
 {
     /// <summary>
-    /// Lógica interna para frmLogin.xaml
+    /// Lógica interna para TipoCadastro.xaml
     /// </summary>
-    public partial class frmLogin : Window
+    public partial class TipoCadastro : Window
     {
-        public frmLogin()
+        public TipoCadastro()
         {
             InitializeComponent();
         }
 
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Home home = new Home();
+            frmLogin frmLogin = new frmLogin();
 
-            home.Show();
+            frmLogin.Show();
             this.Close();
-        }
-
-        private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
-        {
-            TipoCadastro tipoCadastro = new TipoCadastro();
-
-            tipoCadastro.Show();
-            this.Close();
-            
         }
     }
 }

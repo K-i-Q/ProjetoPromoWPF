@@ -26,14 +26,23 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
+
+        <Frame x:Name="fmMain" Grid.Column="1" 
+               Grid.Row="1" Grid.ColumnSpan="4" 
+               Grid.RowSpan="6"
+               NavigationUIVisibility="Hidden"
+               Background="White"
+               />
+
         <TextBlock Text="Login" FontSize="32" Grid.Column="1" Margin="0,0,0,10" Grid.Row="1" Grid.ColumnSpan="3"/>
         <TextBlock Text="E-mail" Margin="0,0,10,10" Grid.Column="1" Grid.Row="2"/>
         <TextBlock Text="Senha" Margin="0,0,10,10" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock Text="Não tenho login" Margin="0,0,10,10" Grid.Column="1" Grid.Row="5"/>
 
         <TextBox x:Name="txtEmail" Margin="0,0,0,10" MinWidth="150" Grid.Column="2" Grid.Row="2"/>
         <TextBox x:Name="txtSenha"  Margin="0,0,0,10" MinWidth="150" Grid.Column="2" Grid.Row="3"/>
 
-        <Button x:Name="btnLogin" Margin="10" Content="Login" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" />
+        <Button x:Name="btnLogin" Margin="10" Content="Login" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Click="BtnLogin_Click" />
+        <Button x:Name="btnRegistrar" Margin="10,0,10,10" Content="Registrar" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="5" Click="BtnRegistrar_Click" />
     </Grid>
 </Window>

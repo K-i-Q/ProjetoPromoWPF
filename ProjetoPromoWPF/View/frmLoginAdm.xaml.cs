@@ -17,34 +17,26 @@ using System.Windows.Shapes;
 namespace ProjetoPromoWPF.View
 {
     /// <summary>
-    /// Lógica interna para frmLoginCliente.xaml
+    /// Lógica interna para frmLoginAdm.xaml
     /// </summary>
-    public partial class frmLoginCliente : Window
+    public partial class frmLoginAdm : Window
     {
-        public frmLoginCliente()
+        public frmLoginAdm()
         {
             InitializeComponent();
         }
-        private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
-        {
-            frmCadastro frmCadastro = new frmCadastro();
-
-            frmCadastro.Show();
-            this.Close();
-        }
-
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            HomeCliente home = new HomeCliente();
-            Cliente cliente = new Cliente();
+            HomeAdm home = new HomeAdm();
+            Administrador adm = new Administrador();
             string senha = txtSenha.Text;
 
-            cliente.Email = txtEmail.Text;
-            cliente = ClienteDAO.FindClient(cliente);
+            adm.Login = txtLogin.Text;
+            adm = AdministradorDAO.FindAdm(adm);
 
-            if (cliente != null)
+            if (adm != null)
             {
-                if (cliente.Senha == senha)
+                if (adm.Senha == senha)
                 {
                     home.Show();
                     this.Close();
@@ -56,7 +48,7 @@ namespace ProjetoPromoWPF.View
             }
             else
             {
-                MessageBox.Show("Email incorreto");
+                MessageBox.Show("Login incorreto");
             }
 
         }

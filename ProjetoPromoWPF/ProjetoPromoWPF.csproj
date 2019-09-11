@@ -66,6 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAL\AdministradorDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\EmpresaClienteDAO.cs" />
     <Compile Include="DAL\EmpresaDAO.cs" />
@@ -86,7 +87,12 @@
     <Compile Include="Migrations\201909111718519_AddPropertySenhaEmpresa.Designer.cs">
       <DependentUpon>201909111718519_AddPropertySenhaEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909111847161_AddClassAdministrador.cs" />
+    <Compile Include="Migrations\201909111847161_AddClassAdministrador.Designer.cs">
+      <DependentUpon>201909111847161_AddClassAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Context.cs" />
     <Compile Include="Model\Empresa.cs" />
@@ -103,11 +109,23 @@
     <Compile Include="View\frmLogin.xaml.cs">
       <DependentUpon>frmLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\frmLoginAdm.xaml.cs">
+      <DependentUpon>frmLoginAdm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLoginCliente.xaml.cs">
       <DependentUpon>frmLoginCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\frmLoginEmpresa.xaml.cs">
       <DependentUpon>frmLoginEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeAdm.xaml.cs">
+      <DependentUpon>HomeAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeCliente.xaml.cs">
+      <DependentUpon>HomeCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeEmpresa.xaml.cs">
+      <DependentUpon>HomeEmpresa.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
@@ -128,11 +146,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\frmLoginAdm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\frmLoginCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\frmLoginEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HomeAdm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HomeCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HomeEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909111718519_AddPropertySenhaEmpresa.resx">
       <DependentUpon>201909111718519_AddPropertySenhaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909111847161_AddClassAdministrador.resx">
+      <DependentUpon>201909111847161_AddClassAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

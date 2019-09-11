@@ -49,5 +49,13 @@ namespace ProjetoPromoWPF.View
             frmCadastro.Show();
             this.Close();
         }
+
+        private void BtnLoginAdm_Click(object sender, RoutedEventArgs e)
+        {
+            frmLoginAdm frmLoginAdm = new frmLoginAdm();
+
+            frmLoginAdm.Show();
+            this.Close();
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace ProjetoPromoWPF.Model
         }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Empresa> Empresas { get; set; }
+        public DbSet<Administrador> Administradores { get; set; }
         public DbSet<EmpresaCliente> EmpresaCliente { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -35,7 +35,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Index home = new Index();
+            HomeEmpresa home = new HomeEmpresa();
             Empresa empresa = new Empresa();
             string senha = txtSenha.Text;
 

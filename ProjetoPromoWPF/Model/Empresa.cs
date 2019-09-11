@@ -13,8 +13,10 @@ namespace ProjetoPromoWPF.Model
     {
         [Key]
         public int EmpresaId { get; set; }
-        public string Nome { get; set; }
+        public string CNPJ { get; set; }
+        public string Razao { get; set; }
         public string Email { get; set; }
+        public string Senha { get; set; }
         public string Telefone { get; set; }
         public DateTime CriadoEm { get; set; }
         public List<EmpresaCliente> EmpresaCliente { get; set; }
@@ -35,7 +37,7 @@ namespace ProjetoPromoWPF.Model
             sb.Append("________________________________________");
             sb.Append("\n| ");
             sb.Append("Nome: ");
-            sb.Append(Nome.ToUpper());
+            sb.Append(Razao.ToUpper());
             sb.Append("\n| ");
             sb.Append("Email: ");
             sb.Append(Email.ToUpper());
@@ -52,7 +54,7 @@ namespace ProjetoPromoWPF.Model
         public override bool Equals(object obj)
         {
             Empresa e = (Empresa)obj;
-            return Nome == e.Nome;
+            return Razao == e.Razao;
         }
     }
 }

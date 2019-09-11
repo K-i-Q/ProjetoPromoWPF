@@ -28,7 +28,7 @@ namespace ProjetoPromoWPF.DAL
             {
                 if (c.ClienteId == empresaCliente.ClienteId)
                 {
-                    sb.Append(EmpresaDAO.FindCompanyById(empresaCliente.EmpresaId).Nome + "\n");
+                    sb.Append(EmpresaDAO.FindCompanyById(empresaCliente.EmpresaId).Razao + "\n");
                 }
             }
             return sb.ToString();

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +28,17 @@ namespace ProjetoPromoWPF.View
 
         private void BtnCadastrarEmpresa_Click(object sender, RoutedEventArgs e)
         {
+            Empresa empresa = new Empresa();
             Index home = new Index();
+
+            empresa.CNPJ = txtCNPJ.Text;
+            empresa.Razao = txtRazao.Text;
+            empresa.Email = txtEmail.Text;
+            empresa.Telefone = txtTelefone.Text;
+            empresa.Senha = txtSenha.Text;
+
+            EmpresaDAO.RegisterCompany(empresa);
+            MessageBox.Show(empresa.Razao + " cadastrada com sucesso!");
 
             home.Show();
             this.Close();

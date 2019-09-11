@@ -33,11 +33,11 @@
 
             <WrapPanel>
                 <TextBlock Text="CNPJ:" Margin="0,0,10,10"/>
-                <TextBox x:Name="txtCPF" Margin="0,0,0,10" MinWidth="150" />
+                <TextBox x:Name="txtCNPJ" Margin="0,0,0,10" MinWidth="150" />
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Text="Razão:" Margin="0,0,10,10"/>
-                <TextBox x:Name="txtNome" Margin="0,0,0,10" MinWidth="150" />
+                <TextBox x:Name="txtRazao" Margin="0,0,0,10" MinWidth="150" />
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Text="E-mail:" Margin="0,0,10,10" />

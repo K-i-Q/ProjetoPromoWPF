@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,18 +26,27 @@ namespace ProjetoPromoWPF.View
             InitializeComponent();
         }
 
+
+        private void BtnLoginEmpresa_Click(object sender, RoutedEventArgs e)
+        {
+            frmLoginEmpresa frmLoginEmpresa = new frmLoginEmpresa();
+
+            frmLoginEmpresa.Show();
+            this.Close();
+        }
+
+        private void BtnLoginCliente_Click(object sender, RoutedEventArgs e)
+        {
+            frmLoginCliente frmLoginCliente = new frmLoginCliente();
+
+            frmLoginCliente.Show();
+            this.Close();
+        }
         private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
         {
             frmCadastro frmCadastro = new frmCadastro();
 
             frmCadastro.Show();
-            this.Close();
-        }
-
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            Index home = new Index();
-            home.Show();
             this.Close();
         }
     }

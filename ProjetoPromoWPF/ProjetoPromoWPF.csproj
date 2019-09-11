@@ -78,6 +78,14 @@
     <Compile Include="Migrations\201909102324407_AddPropertySenhaCliente.Designer.cs">
       <DependentUpon>201909102324407_AddPropertySenhaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.cs" />
+    <Compile Include="Migrations\201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.Designer.cs">
+      <DependentUpon>201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909111718519_AddPropertySenhaEmpresa.cs" />
+    <Compile Include="Migrations\201909111718519_AddPropertySenhaEmpresa.Designer.cs">
+      <DependentUpon>201909111718519_AddPropertySenhaEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Context.cs" />
@@ -95,6 +103,12 @@
     <Compile Include="View\frmLogin.xaml.cs">
       <DependentUpon>frmLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\frmLoginCliente.xaml.cs">
+      <DependentUpon>frmLoginCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLoginEmpresa.xaml.cs">
+      <DependentUpon>frmLoginEmpresa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
@@ -111,6 +125,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\frmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\frmLoginCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\frmLoginEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909102324407_AddPropertySenhaCliente.resx">
       <DependentUpon>201909102324407_AddPropertySenhaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.resx">
+      <DependentUpon>201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909111718519_AddPropertySenhaEmpresa.resx">
+      <DependentUpon>201909111718519_AddPropertySenhaEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

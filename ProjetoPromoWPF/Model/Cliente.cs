@@ -13,6 +13,7 @@ namespace ProjetoPromoWPF.Model
     {
         [Key]
         public int ClienteId { get; set; }
+        public string CPF { get; set; }
         public string Nome { get; set; }
         public string DataNascimento { get; set; }
         public string Genero { get; set; }

@@ -24,6 +24,13 @@ namespace ProjetoPromoWPF.View
             InitializeComponent();
             
         }
-        
+
+        private void BtnSair_Click(object sender, RoutedEventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+
+            frmLogin.Show();
+            this.Close();
+        }
     }
 }

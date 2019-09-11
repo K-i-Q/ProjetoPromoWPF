@@ -36,6 +36,7 @@ namespace ProjetoPromoWPF.View
             frmClienteCadastro frmClienteCadastro = new frmClienteCadastro();
 
             frmClienteCadastro.Show();
+            this.Close();
 
         }
 
@@ -44,6 +45,7 @@ namespace ProjetoPromoWPF.View
             frmEmpresaCadastro frmEmpresaCadastro = new frmEmpresaCadastro();
 
             frmEmpresaCadastro.Show();
+            this.Close();
         }
     }
 }

@@ -23,5 +23,13 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
         }
+
+        private void BtnCadastrarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Index home = new Index();
+
+            home.Show();
+            this.Close();
+        }
     }
 }

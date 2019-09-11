@@ -33,5 +33,7 @@
                /> -->
         <TextBlock Text="Home" FontSize="36" VerticalAlignment="Center"
                    HorizontalAlignment="Center" />
+        <Button x:Name="btnSair" Content="Sair" FontSize="22" HorizontalAlignment="Center"
+                VerticalAlignment="Bottom" Click="BtnSair_Click" />
     </Grid>
 </Window>

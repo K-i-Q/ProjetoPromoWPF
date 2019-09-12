@@ -7,8 +7,23 @@
         mc:Ignorable="d"
         Title="HomeAdm" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Home Adm" FontSize="36" VerticalAlignment="Center"
-                   HorizontalAlignment="Center" />
+        <TextBlock Text="Home Adm" VerticalAlignment="Top" HorizontalAlignment="Center"
+                   FontSize="36" 
+                   />
+        <Frame Margin="0,100,0,40"
+               x:Name="fmListas" 
+               NavigationUIVisibility="Hidden"               
+               />
+
+        <Button x:Name="btnListarTodosOsClientes" Content="Listar Clientes"
+                FontSize="11" VerticalAlignment="Top" HorizontalAlignment="Left"
+                Margin="10,55,0,0" Click="BtnListarTodosOsClientes_Click"
+                />
+        <Button x:Name="btnListarTodasAsEmpresas" Content="Listar Empresas"
+                FontSize="11" VerticalAlignment="Top" HorizontalAlignment="Left"
+                Margin="100,55,0,0" Click="BtnListarTodasAsEmpresas_Click"
+                />
+
         <Button x:Name="btnSair" Content="Sair" FontSize="22" HorizontalAlignment="Center"
                 VerticalAlignment="Bottom" Click="BtnSair_Click" />
     </Grid>

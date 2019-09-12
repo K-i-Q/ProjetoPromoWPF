@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,13 +24,28 @@ namespace ProjetoPromoWPF.View
         public HomeAdm()
         {
             InitializeComponent();
+            
         }
+
+       
+
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
 
             frmLogin.Show();
             this.Close();
+        }
+
+        private void BtnListarTodosOsClientes_Click(object sender, RoutedEventArgs e)
+        {
+            fmListas.Content = new pgListaDeTodosOsClientes();
+            
+        }
+
+        private void BtnListarTodasAsEmpresas_Click(object sender, RoutedEventArgs e)
+        {
+            fmListas.Content = new pgListaDeTodasAsEmpresas();
         }
     }
 }

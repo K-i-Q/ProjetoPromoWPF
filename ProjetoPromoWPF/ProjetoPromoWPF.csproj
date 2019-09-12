@@ -130,6 +130,12 @@
     <Compile Include="View\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgListaDeTodasAsEmpresas.xaml.cs">
+      <DependentUpon>pgListaDeTodasAsEmpresas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgListaDeTodosOsClientes.xaml.cs">
+      <DependentUpon>pgListaDeTodosOsClientes.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\frmCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +177,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgListaDeTodasAsEmpresas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgListaDeTodosOsClientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

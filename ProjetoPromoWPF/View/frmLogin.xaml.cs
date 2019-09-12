@@ -24,6 +24,7 @@ namespace ProjetoPromoWPF.View
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
 

@@ -1,0 +1,53 @@
+﻿<Page x:Class="ProjetoPromoWPF.View.pgListaDeTodosOsClientes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjetoPromoWPF.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="pgListaDeTodosOsClientes">
+
+    <Grid>
+        <ListView x:Name="listaDeTodosOsClientes">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="ID: " />
+                            <TextBlock Text="{Binding ClienteId}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="CPF: " />
+                            <TextBlock Text="{Binding CPF}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nome: " />
+                            <TextBlock Text="{Binding Nome}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Data Nascimento: " />
+                            <TextBlock Text="{Binding DataNascimento}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Gênero: " />
+                            <TextBlock Text="{Binding Genero}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="E-mail: " />
+                            <TextBlock Text="{Binding Email}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Telefone: " />
+                            <TextBlock Text="{Binding Telefone}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Cadastrado em: " />
+                            <TextBlock Text="{Binding CriadoEm}" />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

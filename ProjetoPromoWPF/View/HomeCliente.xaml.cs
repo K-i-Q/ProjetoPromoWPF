@@ -20,11 +20,11 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeCliente : Window
     {
+        Cliente cliente = new Cliente();
         public HomeCliente(Cliente c)
         {
+            cliente = c;
             InitializeComponent();
-            Cliente cliente = c;
-            MessageBox.Show("Cliente: " + c.Nome);
         }
 
 
@@ -38,7 +38,12 @@ namespace ProjetoPromoWPF.View
 
         private void BtnListarEmpresas_Click(object sender, RoutedEventArgs e)
         {
-            fmCliente.Content = new pgContratarEmpresa();
+            fmCliente.Content = new pgContratarEmpresa(cliente);
+        }
+
+        private void BtnListarEmpresasContratadas_Click(object sender, RoutedEventArgs e)
+        {
+            fmCliente.Content = new pgListarEmpresasContratadas(cliente);
         }
     }
 }

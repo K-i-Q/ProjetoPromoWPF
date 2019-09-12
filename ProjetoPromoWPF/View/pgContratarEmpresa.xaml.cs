@@ -22,24 +22,42 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgContratarEmpresa : Page
     {
-        public pgContratarEmpresa()
+        Cliente cliente = new Cliente();
+        Empresa empresa = new Empresa();
+        EmpresaCliente empresaCliente;
+        Context ctx = SingletonContext.GetInstance();
+
+        public pgContratarEmpresa(Cliente c)
         {
+            cliente = c;
+            empresaCliente = new EmpresaCliente();
             InitializeComponent();
             listarEmpresasParaContratar();
         }
         private void listarEmpresasParaContratar()
         {
-            Context ctx = SingletonContext.GetInstance();
-
-            listaDeEmpresasParaContratar.ItemsSource = ctx.Empresas.ToList();
-            
+            listaDeEmpresasParaContratar.ItemsSource = ctx.Empresas.ToList();            
         }
         private void BtnContratarEsta_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            Empresa empresa = button.DataContext as Empresa;
+            empresa = button.DataContext as Empresa;
 
-            MessageBox.Show("Empresa: "+ empresa.Razao);
+            if (MessageBox.Show("Deseja contratar a empresa "+empresa.Razao+"?","Contratar",MessageBoxButton.YesNo,MessageBoxImage.Question)==MessageBoxResult.Yes)
+            {
+                empresaCliente.ClienteId = cliente.ClienteId;
+                empresaCliente.Cliente = cliente;
+                empresaCliente.EmpresaId = empresa.EmpresaId;
+                empresaCliente.Empresa = empresa;
+
+                EmpresaClienteDAO.HireCompany(empresaCliente);
+
+                MessageBox.Show("Empresa " + empresa.Razao + " contratada com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada!");
+            }
         }
     }
 }

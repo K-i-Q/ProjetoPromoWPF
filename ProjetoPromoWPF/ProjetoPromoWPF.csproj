@@ -71,25 +71,9 @@
     <Compile Include="DAL\EmpresaClienteDAO.cs" />
     <Compile Include="DAL\EmpresaDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
-    <Compile Include="Migrations\201909102321065_CriacaoBancoDeDados.cs" />
-    <Compile Include="Migrations\201909102321065_CriacaoBancoDeDados.Designer.cs">
-      <DependentUpon>201909102321065_CriacaoBancoDeDados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909102324407_AddPropertySenhaCliente.cs" />
-    <Compile Include="Migrations\201909102324407_AddPropertySenhaCliente.Designer.cs">
-      <DependentUpon>201909102324407_AddPropertySenhaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.cs" />
-    <Compile Include="Migrations\201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.Designer.cs">
-      <DependentUpon>201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909111718519_AddPropertySenhaEmpresa.cs" />
-    <Compile Include="Migrations\201909111718519_AddPropertySenhaEmpresa.Designer.cs">
-      <DependentUpon>201909111718519_AddPropertySenhaEmpresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909111847161_AddClassAdministrador.cs" />
-    <Compile Include="Migrations\201909111847161_AddClassAdministrador.Designer.cs">
-      <DependentUpon>201909111847161_AddClassAdministrador.cs</DependentUpon>
+    <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.cs" />
+    <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.Designer.cs">
+      <DependentUpon>201909122327523_CriacaoBancoDeDados.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
@@ -138,6 +122,9 @@
     </Compile>
     <Compile Include="View\pgListaDeTodosOsClientes.xaml.cs">
       <DependentUpon>pgListaDeTodosOsClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgListarEmpresasContratadas.xaml.cs">
+      <DependentUpon>pgListarEmpresasContratadas.xaml</DependentUpon>
     </Compile>
     <Page Include="View\frmCadastro.xaml">
       <SubType>Designer</SubType>
@@ -195,6 +182,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgListarEmpresasContratadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -210,20 +201,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201909102321065_CriacaoBancoDeDados.resx">
-      <DependentUpon>201909102321065_CriacaoBancoDeDados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909102324407_AddPropertySenhaCliente.resx">
-      <DependentUpon>201909102324407_AddPropertySenhaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.resx">
-      <DependentUpon>201909111654434_AddPropertyCPFAndCNPJClienteEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909111718519_AddPropertySenhaEmpresa.resx">
-      <DependentUpon>201909111718519_AddPropertySenhaEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909111847161_AddClassAdministrador.resx">
-      <DependentUpon>201909111847161_AddClassAdministrador.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909122327523_CriacaoBancoDeDados.resx">
+      <DependentUpon>201909122327523_CriacaoBancoDeDados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,14 +8,26 @@ namespace ProjetoPromoWPF.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Administradores",
+                c => new
+                    {
+                        AdministradorId = c.Int(nullable: false, identity: true),
+                        Login = c.String(),
+                        Senha = c.String(),
+                    })
+                .PrimaryKey(t => t.AdministradorId);
+            
+            CreateTable(
                 "dbo.Clientes",
                 c => new
                     {
                         ClienteId = c.Int(nullable: false, identity: true),
+                        CPF = c.String(),
                         Nome = c.String(),
                         DataNascimento = c.String(),
                         Genero = c.String(),
                         Email = c.String(),
+                        Senha = c.String(),
                         Telefone = c.String(),
                         CriadoEm = c.DateTime(nullable: false),
                     })
@@ -25,11 +37,12 @@ namespace ProjetoPromoWPF.Migrations
                 "dbo.ClientesDaEmpresa",
                 c => new
                     {
+                        EmpresaClienteId = c.Int(nullable: false, identity: true),
                         ClienteId = c.Int(nullable: false),
                         EmpresaId = c.Int(nullable: false),
                         ContratadaEm = c.DateTime(nullable: false),
                     })
-                .PrimaryKey(t => new { t.ClienteId, t.EmpresaId })
+                .PrimaryKey(t => t.EmpresaClienteId)
                 .ForeignKey("dbo.Clientes", t => t.ClienteId, cascadeDelete: true)
                 .ForeignKey("dbo.Empresas", t => t.EmpresaId, cascadeDelete: true)
                 .Index(t => t.ClienteId)
@@ -40,8 +53,10 @@ namespace ProjetoPromoWPF.Migrations
                 c => new
                     {
                         EmpresaId = c.Int(nullable: false, identity: true),
-                        Nome = c.String(),
+                        CNPJ = c.String(),
+                        Razao = c.String(),
                         Email = c.String(),
+                        Senha = c.String(),
                         Telefone = c.String(),
                         CriadoEm = c.DateTime(nullable: false),
                     })
@@ -58,6 +73,7 @@ namespace ProjetoPromoWPF.Migrations
             DropTable("dbo.Empresas");
             DropTable("dbo.ClientesDaEmpresa");
             DropTable("dbo.Clientes");
+            DropTable("dbo.Administradores");
         }
     }
 }

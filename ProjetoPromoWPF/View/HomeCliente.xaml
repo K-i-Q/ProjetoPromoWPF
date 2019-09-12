@@ -22,6 +22,14 @@
                 HorizontalAlignment="Left"
                 Margin="10,55,0,0" Click="BtnListarEmpresas_Click" 
                 />
+        <Button x:Name="btnListarEmpresasContratadas" 
+                Content="Empresas Contratadas"
+                FontSize="11" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                Margin="100,55,0,0" Click="BtnListarEmpresasContratadas_Click" 
+                />
+        
         
         <Button x:Name="btnSair" Content="Sair" FontSize="22" HorizontalAlignment="Center"
                 VerticalAlignment="Bottom" Click="BtnSair_Click" />

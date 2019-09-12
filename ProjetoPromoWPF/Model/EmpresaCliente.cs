@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace ProjetoPromoWPF.Model
     [Table("ClientesDaEmpresa")]
     public class EmpresaCliente
     {
-
+        [Key]
+        public int EmpresaClienteId { get; set; }
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
         public int EmpresaId { get; set; }

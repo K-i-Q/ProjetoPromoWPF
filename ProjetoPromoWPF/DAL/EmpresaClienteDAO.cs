@@ -15,7 +15,7 @@ namespace ProjetoPromoWPF.DAL
         public static void HireCompany(EmpresaCliente empresaCliente)
         {
             ctx.EmpresaCliente.Add(empresaCliente);
-           // ctx.SaveChanges();
+            ctx.SaveChanges();
         }
 
         public static List<EmpresaCliente> ShowAllCompanyClient() => ctx.EmpresaCliente.ToList();

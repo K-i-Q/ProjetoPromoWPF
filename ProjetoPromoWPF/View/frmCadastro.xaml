@@ -7,16 +7,42 @@
         mc:Ignorable="d"
         Title="frmCadastro" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Cadastro" VerticalAlignment="Center"
-                   HorizontalAlignment="Center" FontSize="36" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    Grid.Column="1" 
+                    Grid.Row="1" Grid.ColumnSpan="4" 
+                    Grid.RowSpan="6">
+            <TextBlock Text="Cadastro" VerticalAlignment="Center"
+                       HorizontalAlignment="Center" FontSize="36" />
 
-        <Button x:Name="btnEmpresaCadastro" Content="Cadastro Empresa" FontSize="22" HorizontalAlignment="Center"
-                VerticalAlignment="Bottom" Margin="0,0,0,75" Click="BtnEmpresaCadastro_Click"/>
+            <WrapPanel Margin="0,20,0,20">
+                <Button x:Name="btnEmpresaCadastro" Content="Cadastro Empresa" FontSize="22" HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom" Margin="0,0,10,0" Click="BtnEmpresaCadastro_Click"/>
 
-        <Button x:Name="btnClienteCadastro" Content="Cadastro Cliente" FontSize="22" HorizontalAlignment="Center"
-                VerticalAlignment="Bottom" Margin="0,0,0,35" Click="BtnClienteCadastro_Click"/>
+                <Button x:Name="btnClienteCadastro" Content="Cadastro Cliente" FontSize="22" HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom" Margin="0,0,0,0" Click="BtnClienteCadastro_Click"/>
 
-        <Button x:Name="btnBackToLogin" Content="Login" VerticalAlignment="Bottom" 
+            </WrapPanel>
+            <Button x:Name="btnBackToLogin" Content="Login" VerticalAlignment="Bottom" 
                 HorizontalAlignment="Center" FontSize="20" Click="BtnBackToLogin_Click" />
+        </StackPanel>
     </Grid>
 </Window>

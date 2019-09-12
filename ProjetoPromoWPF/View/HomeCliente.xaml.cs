@@ -35,5 +35,10 @@ namespace ProjetoPromoWPF.View
             frmLogin.Show();
             this.Close();
         }
+
+        private void BtnListarEmpresas_Click(object sender, RoutedEventArgs e)
+        {
+            fmCliente.Content = new pgContratarEmpresa();
+        }
     }
 }

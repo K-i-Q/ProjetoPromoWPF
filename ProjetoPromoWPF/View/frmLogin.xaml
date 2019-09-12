@@ -26,9 +26,11 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" 
-               Grid.Row="1" Grid.ColumnSpan="4" 
-               Grid.RowSpan="6">
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    Grid.Column="1" 
+                    Grid.Row="1" Grid.ColumnSpan="4" 
+                    Grid.RowSpan="6">
             <TextBlock Text="Login" HorizontalAlignment="Center" FontSize="32"  Margin="0,0,0,10"  />
 
 

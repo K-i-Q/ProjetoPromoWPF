@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="HomeAdm" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Home Adm" VerticalAlignment="Top" HorizontalAlignment="Center"
+        <TextBlock Text="Home Adm" 
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
                    FontSize="36" 
                    />
         <Frame Margin="0,100,0,40"
-               x:Name="fmListas" 
+               x:Name="fmAdm" 
                NavigationUIVisibility="Hidden"               
                />
 

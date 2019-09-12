@@ -39,13 +39,13 @@ namespace ProjetoPromoWPF.View
 
         private void BtnListarTodosOsClientes_Click(object sender, RoutedEventArgs e)
         {
-            fmListas.Content = new pgListaDeTodosOsClientes();
+            fmAdm.Content = new pgListaDeTodosOsClientes();
             
         }
 
         private void BtnListarTodasAsEmpresas_Click(object sender, RoutedEventArgs e)
         {
-            fmListas.Content = new pgListaDeTodasAsEmpresas();
+            fmAdm.Content = new pgListaDeTodasAsEmpresas();
         }
     }
 }

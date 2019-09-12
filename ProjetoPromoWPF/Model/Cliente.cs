@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ProjetoPromoWPF.Model
 {
     [Table("Clientes")]
-    class Cliente
+    public class Cliente
     {
         [Key]
         public int ClienteId { get; set; }

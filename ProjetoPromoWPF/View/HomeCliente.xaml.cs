@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,14 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeCliente : Window
     {
-        public HomeCliente()
+        public HomeCliente(Cliente c)
         {
             InitializeComponent();
+            Cliente cliente = c;
+            MessageBox.Show("Cliente: " + c.Nome);
         }
+
+
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {
             frmLogin frmLogin = new frmLogin();

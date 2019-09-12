@@ -35,7 +35,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            HomeEmpresa home = new HomeEmpresa();
+            HomeEmpresa home;
             Empresa empresa = new Empresa();
             string senha = txtSenha.Text;
 
@@ -46,6 +46,7 @@ namespace ProjetoPromoWPF.View
             {
                 if (empresa.Senha == senha)
                 {
+                    home = new HomeEmpresa(empresa);
                     home.Show();
                     this.Close();
                 }

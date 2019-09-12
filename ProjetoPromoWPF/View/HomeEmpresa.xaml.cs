@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeEmpresa : Window
     {
-        public HomeEmpresa()
+        public HomeEmpresa(Empresa e)
         {
             InitializeComponent();
+            Empresa empresa = e;
+            MessageBox.Show("Empresa: " + e.Razao);
         }
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {

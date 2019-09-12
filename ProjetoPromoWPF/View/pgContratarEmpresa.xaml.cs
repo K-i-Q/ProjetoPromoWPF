@@ -36,8 +36,10 @@ namespace ProjetoPromoWPF.View
         }
         private void BtnContratarEsta_Click(object sender, RoutedEventArgs e)
         {
-           
-            MessageBox.Show("Empresa: ");
+            Button button = sender as Button;
+            Empresa empresa = button.DataContext as Empresa;
+
+            MessageBox.Show("Empresa: "+ empresa.Razao);
         }
     }
 }

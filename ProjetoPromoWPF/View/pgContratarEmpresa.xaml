@@ -11,7 +11,7 @@
       >
 
     <Grid>
-        <ListView x:Name="listaDeEmpresasParaContratar">
+        <ListView x:Name="listaDeEmpresasParaContratar" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -22,6 +22,11 @@
                         <WrapPanel>
                             <TextBlock Text="Razão: " />
                             <TextBlock x:Name="txtRazao" Text="{Binding Razao}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Button x:Name="btnContratarEsta" Content="Contratar"
+                                    Click="BtnContratarEsta_Click"
+                                    />
                         </WrapPanel>
                     </StackPanel>
                 </DataTemplate>

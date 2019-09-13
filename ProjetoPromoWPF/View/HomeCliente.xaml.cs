@@ -23,8 +23,8 @@ namespace ProjetoPromoWPF.View
         Cliente cliente = new Cliente();
         public HomeCliente(Cliente c)
         {
-            cliente = c;
             InitializeComponent();
+            cliente = c;
         }
 
 

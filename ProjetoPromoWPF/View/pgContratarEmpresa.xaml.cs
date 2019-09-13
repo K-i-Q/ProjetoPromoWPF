@@ -24,14 +24,13 @@ namespace ProjetoPromoWPF.View
     {
         Cliente cliente = new Cliente();
         Empresa empresa = new Empresa();
-        EmpresaCliente empresaCliente;
+        EmpresaCliente empresaCliente = new EmpresaCliente();
         Context ctx = SingletonContext.GetInstance();
 
         public pgContratarEmpresa(Cliente c)
         {
-            cliente = c;
-            empresaCliente = new EmpresaCliente();
             InitializeComponent();
+            cliente = c;
             listarEmpresasParaContratar();
         }
         private void listarEmpresasParaContratar()

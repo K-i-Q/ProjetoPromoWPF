@@ -27,8 +27,8 @@ namespace ProjetoPromoWPF.View
 
         public pgListarEmpresasContratadas(Cliente c)
         {
-            cliente = c;
             InitializeComponent();
+            cliente = c;
             listarEmpresasContratadasPeloCliente();
         }
 

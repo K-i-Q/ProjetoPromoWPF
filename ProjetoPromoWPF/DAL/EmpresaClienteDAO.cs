@@ -21,17 +21,29 @@ namespace ProjetoPromoWPF.DAL
         public static List<EmpresaCliente> ShowAllCompanyClient() => ctx.EmpresaCliente.ToList();
 
         //show companies hire by client
-        public static string ShowContractorsByClient(Cliente c)
+        public static List<Empresa> ShowContractorsByClient(Cliente c)
         {
-            StringBuilder sb = new StringBuilder();
+            List<Empresa> empresasContratadas = new List<Empresa>();
+
             foreach (EmpresaCliente empresaCliente in ShowAllCompanyClient())
             {
                 if (c.ClienteId == empresaCliente.ClienteId)
                 {
-                    sb.Append(EmpresaDAO.FindCompanyById(empresaCliente.EmpresaId).Razao + "\n");
+                    empresasContratadas.Add(EmpresaDAO.FindCompanyById(empresaCliente.EmpresaId));
                 }
             }
-            return sb.ToString();
+
+            return empresasContratadas;
+
+            //StringBuilder sb = new StringBuilder();
+            //foreach (EmpresaCliente empresaCliente in ShowAllCompanyClient())
+            //{
+            //    if (c.ClienteId == empresaCliente.ClienteId)
+            //    {
+            //        sb.Append(EmpresaDAO.FindCompanyById(empresaCliente.EmpresaId).Razao + "\n");
+            //    }
+            //}
+            //return sb.ToString();
         }
     }
 }

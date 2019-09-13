@@ -34,7 +34,9 @@ namespace ProjetoPromoWPF.View
 
         private void listarEmpresasContratadasPeloCliente()
         {
-            listaDeEmpresasContratadasPeloCliente.ItemsSource = ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(cliente.ClienteId)).ToList();
+            listaDeEmpresasContratadasPeloCliente.ItemsSource = EmpresaClienteDAO.ShowContractorsByClient(cliente);
+
+           //ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(cliente.ClienteId)).ToList();
         }
     }
 }

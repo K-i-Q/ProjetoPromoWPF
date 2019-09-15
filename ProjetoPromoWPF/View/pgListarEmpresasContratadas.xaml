@@ -9,29 +9,41 @@
       Title="pgListarEmpresasContratadas">
 
     <Grid>
-        <ListView x:Name="listaDeEmpresasContratadasPeloCliente" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Frame x:Name="fmDetalhesEmpresa"
+               NavigationUIVisibility="Hidden"
+               Grid.Column="2"
+               Grid.Row="1"
+               />
+
+        <ListView x:Name="listaDeEmpresasContratadasPeloCliente"
+                  Grid.Column="1"
+                  Grid.Row="1"
+                  >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <WrapPanel>
-                            <TextBlock Text="CNPJ: " />
-                            <TextBlock x:Name="txtCnpj" 
-                                       Text="{Binding CNPJ}" />
-                        </WrapPanel>
                         <WrapPanel>
                             <TextBlock Text="Razão: " />
                             <TextBlock x:Name="txtRazao"
                                        Text="{Binding Razao}" />
                         </WrapPanel>
                         <WrapPanel>
-                            <TextBlock Text="Telefone: " />
-                            <TextBlock x:Name="txtTelefone"
-                                       Text="{Binding Telefone}" />
-                        </WrapPanel>
-                        <WrapPanel>
-                            <TextBlock Text="E-mail: " />
-                            <TextBlock x:Name="txtEmail"
-                                       Text="{Binding Email}" />
+                            <Button x:Name="btnDetalhes"
+                                    Content="Detalhes" 
+                                    Click="BtnDetalhes_Click" 
+                                    />
                         </WrapPanel>
                     </StackPanel>
                 </DataTemplate>

@@ -19,6 +19,17 @@ namespace ProjetoPromoWPF.DAL
         }
 
         public static List<EmpresaCliente> ShowAllCompanyClient() => ctx.EmpresaCliente.ToList();
+        public static EmpresaCliente ShowHiring(EmpresaCliente ec)
+        {
+            foreach (EmpresaCliente contratacao in ShowAllCompanyClient())
+            {
+                if (contratacao.EmpresaClienteId.Equals(ec.EmpresaClienteId))
+                {
+                    return contratacao;
+                }
+            }
+            return null;
+        }
 
         //show companies hire by client
         public static List<Empresa> ShowContractorsByClient(Cliente c)
@@ -34,16 +45,18 @@ namespace ProjetoPromoWPF.DAL
             }
 
             return empresasContratadas;
+        }
 
-            //StringBuilder sb = new StringBuilder();
-            //foreach (EmpresaCliente empresaCliente in ShowAllCompanyClient())
-            //{
-            //    if (c.ClienteId == empresaCliente.ClienteId)
-            //    {
-            //        sb.Append(EmpresaDAO.FindCompanyById(empresaCliente.EmpresaId).Razao + "\n");
-            //    }
-            //}
-            //return sb.ToString();
+        public static Plano ShowPlanByCompanyPlanId(int planoid)
+        {
+            foreach (EmpresaCliente empresaDoCliente in ShowAllCompanyClient())
+            {
+                if (planoid.Equals(empresaDoCliente.PlanoId))
+                {
+                    return PlanoDAO.FindPlanById(planoid);
+                }
+            }
+            return null;
         }
     }
 }

@@ -80,6 +80,14 @@
     <Compile Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.Designer.cs">
       <DependentUpon>201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909152107009_AddPropertyPlanoToClassEmpresaCliente.cs" />
+    <Compile Include="Migrations\201909152107009_AddPropertyPlanoToClassEmpresaCliente.Designer.cs">
+      <DependentUpon>201909152107009_AddPropertyPlanoToClassEmpresaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs" />
+    <Compile Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.Designer.cs">
+      <DependentUpon>201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Cliente.cs" />
@@ -125,6 +133,9 @@
     </Compile>
     <Compile Include="View\pgDetalhesCliente.xaml.cs">
       <DependentUpon>pgDetalhesCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgDetalhesEmpresaContratada.xaml.cs">
+      <DependentUpon>pgDetalhesEmpresaContratada.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgDetalhesEmpresaContratar.xaml.cs">
       <DependentUpon>pgDetalhesEmpresaContratar.xaml</DependentUpon>
@@ -193,6 +204,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgDetalhesEmpresaContratada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgDetalhesEmpresaContratar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -233,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.resx">
       <DependentUpon>201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909152107009_AddPropertyPlanoToClassEmpresaCliente.resx">
+      <DependentUpon>201909152107009_AddPropertyPlanoToClassEmpresaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.resx">
+      <DependentUpon>201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

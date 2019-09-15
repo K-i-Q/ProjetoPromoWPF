@@ -23,10 +23,17 @@ namespace ProjetoPromoWPF.View
     public partial class pgDetalhesEmpresaContratar : Page
     {
         Context ctx = SingletonContext.GetInstance();
-        public pgDetalhesEmpresaContratar(Empresa e)
+        Empresa empresa = new Empresa();
+        Cliente cliente = new Cliente();
+        Plano plano = new Plano();
+        EmpresaCliente empresaCliente = new EmpresaCliente();
+
+        public pgDetalhesEmpresaContratar(Empresa e, Cliente c)
         {
             InitializeComponent();
             listarDetalhesDaEmpresa(e);
+            empresa = e;
+            cliente = c;
         }
         private void listarDetalhesDaEmpresa(Empresa e)
         {
@@ -35,6 +42,30 @@ namespace ProjetoPromoWPF.View
             txtRazao.Text = e.Razao;
             txtTelefone.Text = e.Telefone;
             listaDePlanos.ItemsSource = ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
+        }
+
+        private void BtnAssinar_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            plano = button.DataContext as Plano;
+
+            if (MessageBox.Show("Deseja contratar o plano " + plano.Nome + "?", "Contratar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                empresaCliente.ClienteId = cliente.ClienteId;
+                empresaCliente.Cliente = cliente;
+                empresaCliente.EmpresaId = empresa.EmpresaId;
+                empresaCliente.Empresa = empresa;
+                empresaCliente.PlanoId = plano.PlanoId;
+                empresaCliente.Plano = plano;
+
+                EmpresaClienteDAO.HireCompany(empresaCliente);
+
+                MessageBox.Show("Plano " + plano.Nome + " da empresa "+ empresa.Razao+" contratado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada!");
+            }
         }
     }
 }

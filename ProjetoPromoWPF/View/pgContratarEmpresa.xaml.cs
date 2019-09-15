@@ -43,24 +43,7 @@ namespace ProjetoPromoWPF.View
             empresa = button.DataContext as Empresa;
 
 
-            fmDetalhesEmpresaContratar.Content = new pgDetalhesEmpresaContratar(empresa);
-
-
-            //if (MessageBox.Show("Deseja contratar a empresa "+empresa.Razao+"?","Contratar",MessageBoxButton.YesNo,MessageBoxImage.Question)==MessageBoxResult.Yes)
-            //{
-            //    empresaCliente.ClienteId = cliente.ClienteId;
-            //    empresaCliente.Cliente = cliente;
-            //    empresaCliente.EmpresaId = empresa.EmpresaId;
-            //    empresaCliente.Empresa = empresa;
-
-            //    EmpresaClienteDAO.HireCompany(empresaCliente);
-
-            //    MessageBox.Show("Empresa " + empresa.Razao + " contratada com sucesso!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Operação cancelada!");
-            //}
+            fmDetalhesEmpresaContratar.Content = new pgDetalhesEmpresaContratar(empresa, cliente);
         }
     }
 }

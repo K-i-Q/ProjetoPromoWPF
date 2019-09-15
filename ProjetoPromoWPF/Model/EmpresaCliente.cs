@@ -17,6 +17,8 @@ namespace ProjetoPromoWPF.Model
         public Cliente Cliente { get; set; }
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
+        public int PlanoId { get; set; }
+        public Plano Plano { get; set; }
         public DateTime ContratadaEm { get; set; }
 
         public EmpresaCliente()
@@ -25,6 +27,7 @@ namespace ProjetoPromoWPF.Model
 
             Cliente = new Cliente();
             Empresa = new Empresa();
+            Plano = new Plano();
         }
     }
 }

@@ -84,7 +84,7 @@
                             </WrapPanel>
                             <WrapPanel>
                                 <Button x:Name="btnAssinar" Content="Assinar"
-                                    
+                                    Click="BtnAssinar_Click"
                                     />
                             </WrapPanel>
                         </StackPanel>

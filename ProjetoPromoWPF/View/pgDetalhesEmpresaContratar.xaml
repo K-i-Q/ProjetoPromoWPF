@@ -65,16 +65,32 @@
                             FontSize="24"
                            />
             </WrapPanel>
-            <WrapPanel Grid.Column="1"
-                       Grid.Row="3"
-                      >
-                <TextBlock Text="Plano 1"
-                           />
-                <TextBlock Text="Plano 2"
-                           />
-                <TextBlock Text="Plano 3"
-                           />
-            </WrapPanel>
+            <ListView Grid.Column="1"
+                       Grid.Row="3" x:Name="listaDePlanos">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Nome: " />
+                                <TextBlock x:Name="txtNomePlano" Text="{Binding Nome}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Preço: " />
+                                <TextBlock x:Name="txtPrecoPlano" Text="{Binding Preco}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Descrição: " />
+                                <TextBlock x:Name="txtDescricaoPlano" Text="{Binding Descricao}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <Button x:Name="btnAssinar" Content="Assinar"
+                                    
+                                    />
+                            </WrapPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
     </Grid>
 </Page>

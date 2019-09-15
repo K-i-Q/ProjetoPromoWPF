@@ -34,6 +34,7 @@ namespace ProjetoPromoWPF.View
             txtEmail.Text = e.Email;
             txtRazao.Text = e.Razao;
             txtTelefone.Text = e.Telefone;
+            listaDePlanos.ItemsSource = ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
         }
     }
 }

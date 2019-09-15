@@ -20,6 +20,7 @@ namespace ProjetoPromoWPF.Model
         public string Telefone { get; set; }
         public DateTime CriadoEm { get; set; }
         public List<EmpresaCliente> EmpresaCliente { get; set; }
+        public List<Plano> Planos { get; set; }
 
 
         public Empresa()
@@ -44,6 +45,9 @@ namespace ProjetoPromoWPF.Model
             sb.Append("\n| ");
             sb.Append("Telefone: ");
             sb.Append(Telefone);
+            sb.Append("\n| ");
+            sb.Append("Planos: ");
+            sb.Append(Planos);
             sb.Append("\n| ");
             sb.Append("Cadastrado em: ");
             sb.Append(CriadoEm);

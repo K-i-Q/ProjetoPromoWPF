@@ -11,21 +11,37 @@
       >
 
     <Grid>
-        <ListView x:Name="listaDeEmpresasParaContratar" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Frame x:Name="fmDetalhesEmpresaContratar" 
+               NavigationUIVisibility="Hidden"
+               Grid.Column="2"
+               Grid.Row="1"
+               />
+        
+        <ListView x:Name="listaDeEmpresasParaContratar"
+                  Grid.Column="1" Grid.Row="1"
+                  >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <WrapPanel>
-                            <TextBlock Text="CNPJ: " />
-                            <TextBlock x:Name="txtCnpj" Text="{Binding CNPJ}" />
-                        </WrapPanel>
                         <WrapPanel>
                             <TextBlock Text="Razão: " />
                             <TextBlock x:Name="txtRazao" Text="{Binding Razao}" />
                         </WrapPanel>
                         <WrapPanel>
-                            <Button x:Name="btnContratarEsta" Content="Contratar"
-                                    Click="BtnContratarEsta_Click"
+                            <Button x:Name="btnContratarEsta" Content="Detalhes"
+                                    Click="BtnDetalhesContratar_Click"
                                     />
                         </WrapPanel>
                     </StackPanel>

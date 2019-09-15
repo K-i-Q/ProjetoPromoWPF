@@ -45,5 +45,10 @@ namespace ProjetoPromoWPF.View
         {
             fmCliente.Content = new pgListarEmpresasContratadas(cliente);
         }
+
+        private void BtnMeuPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            fmCliente.Content = new pgMeuPerfil(cliente);
+        }
     }
 }

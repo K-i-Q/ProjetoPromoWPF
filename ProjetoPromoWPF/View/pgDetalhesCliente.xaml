@@ -1,0 +1,52 @@
+﻿<Page x:Class="ProjetoPromoWPF.View.pgDetalhesCliente"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjetoPromoWPF.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="pgDetalhesCliente">
+
+    <Grid>
+        <StackPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <TextBlock Text="Nome: " />
+                <TextBox MinWidth="150"
+                         x:Name="txtNome"
+                         Text="{Binding Nome}"/>
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <TextBlock Text="Gênero: " />
+                <TextBox MinWidth="150"
+                         x:Name="txtGenero"
+                         Text="{Binding Genero}"/>
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <TextBlock Text="Telefone: " />
+                <TextBox  MinWidth="150"
+                         x:Name="txtTelefone"
+                         Text="{Binding Telefone}"
+                         
+                         />
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <TextBlock Text="E-mail: " />
+                <TextBox MinWidth="150"
+                         x:Name="txtEmail"
+                         Text="{Binding Email}"/>
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <Button x:Name="btnCancelar"
+                        Content="Cancelar"
+                        Click="BtnCancelar_Click"
+                        />
+                <Button x:Name="btnSalvar"
+                        Content="Salvar"
+                        Click="BtnSalvar_Click"
+                        Margin="10,0,0,0"
+                        />
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -70,10 +70,15 @@
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\EmpresaClienteDAO.cs" />
     <Compile Include="DAL\EmpresaDAO.cs" />
+    <Compile Include="DAL\PlanoDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.cs" />
     <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.Designer.cs">
       <DependentUpon>201909122327523_CriacaoBancoDeDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs" />
+    <Compile Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.Designer.cs">
+      <DependentUpon>201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
@@ -81,6 +86,7 @@
     <Compile Include="Model\Context.cs" />
     <Compile Include="Model\Empresa.cs" />
     <Compile Include="Model\EmpresaCliente.cs" />
+    <Compile Include="Model\Plano.cs" />
     <Compile Include="View\frmCadastro.xaml.cs">
       <DependentUpon>frmCadastro.xaml</DependentUpon>
     </Compile>
@@ -117,6 +123,12 @@
     <Compile Include="View\pgContratarEmpresa.xaml.cs">
       <DependentUpon>pgContratarEmpresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgDetalhesCliente.xaml.cs">
+      <DependentUpon>pgDetalhesCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgDetalhesEmpresaContratar.xaml.cs">
+      <DependentUpon>pgDetalhesEmpresaContratar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgListaDeTodasAsEmpresas.xaml.cs">
       <DependentUpon>pgListaDeTodasAsEmpresas.xaml</DependentUpon>
     </Compile>
@@ -125,6 +137,9 @@
     </Compile>
     <Compile Include="View\pgListarEmpresasContratadas.xaml.cs">
       <DependentUpon>pgListarEmpresasContratadas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgMeuPerfil.xaml.cs">
+      <DependentUpon>pgMeuPerfil.xaml</DependentUpon>
     </Compile>
     <Page Include="View\frmCadastro.xaml">
       <SubType>Designer</SubType>
@@ -174,6 +189,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgDetalhesCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgDetalhesEmpresaContratar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgListaDeTodasAsEmpresas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgListarEmpresasContratadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgMeuPerfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +230,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201909122327523_CriacaoBancoDeDados.resx">
       <DependentUpon>201909122327523_CriacaoBancoDeDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.resx">
+      <DependentUpon>201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

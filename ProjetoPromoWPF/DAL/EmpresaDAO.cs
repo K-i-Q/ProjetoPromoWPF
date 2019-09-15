@@ -30,15 +30,6 @@ namespace ProjetoPromoWPF.DAL
         public static Empresa FindCompany(Empresa empresa)
         {
             return ctx.Empresas.FirstOrDefault(x => x.Email.Equals(empresa.Email));
-
-            //foreach (Empresa e in ShowCompanies())
-            //{
-            //    if (empresa == e)
-            //    {
-            //        return e;
-            //    }
-            //}
-            //return null;
         }
         //find Company by ID
         public static Empresa FindCompanyById(int id)

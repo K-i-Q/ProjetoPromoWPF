@@ -33,5 +33,25 @@ namespace ProjetoPromoWPF.View
             frmLogin.Show();
             this.Close();
         }
+
+        private void BtnParcerias_Click(object sender, RoutedEventArgs e)
+        {
+            fmEmpresa.Content = new pgParceria();
+        }
+
+        private void BtnClientes_Click(object sender, RoutedEventArgs e)
+        {
+            fmEmpresa.Content = new pgCliente();
+        }
+
+        private void BtnPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            fmEmpresa.Content = new pgPerfil();
+        }
+
+        private void BtnBeneficios_Click(object sender, RoutedEventArgs e)
+        {
+            fmEmpresa.Content = new pgBeneficio();
+        }
     }
 }

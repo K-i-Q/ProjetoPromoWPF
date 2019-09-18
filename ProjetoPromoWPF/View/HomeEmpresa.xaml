@@ -7,8 +7,44 @@
         mc:Ignorable="d"
         Title="HomeEmpresa" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Home Empresa" FontSize="36" VerticalAlignment="Center"
+        <TextBlock Text="Home Empresa" 
+                   FontSize="36" 
+                   VerticalAlignment="Top"
                    HorizontalAlignment="Center" />
+
+        <Frame Margin="0,100,0,40"
+               x:Name="fmEmpresa" 
+               NavigationUIVisibility="Hidden"               
+               />
+        <Button x:Name="btnParcerias" 
+                Content="Parceria"
+                FontSize="11" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                Margin="10,55,0,0" Click="BtnParcerias_Click"
+                />
+        <Button x:Name="btnClientes" 
+                Content="Clientes"
+                FontSize="11" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                Margin="60,55,0,0" Click="BtnClientes_Click" 
+                />
+        <Button x:Name="btnPerfil" 
+                Content="Perfil"
+                FontSize="11" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                Margin="110,55,0,0" Click="BtnPerfil_Click" 
+                />
+        <Button x:Name="btnBeneficios" 
+                Content="Benefícios"
+                FontSize="11" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                Margin="150,55,0,0" Click="BtnBeneficios_Click" 
+                />
+
         <Button x:Name="btnSair" Content="Sair" FontSize="22" HorizontalAlignment="Center"
                 VerticalAlignment="Bottom" Click="BtnSair_Click" />
     </Grid>

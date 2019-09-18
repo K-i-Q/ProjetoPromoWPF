@@ -128,6 +128,24 @@
     <Compile Include="View\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgAlteraBeneficio.xaml.cs">
+      <DependentUpon>pgAlteraBeneficio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgAlterarParceria.xaml.cs">
+      <DependentUpon>pgAlterarParceria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgBeneficio.xaml.cs">
+      <DependentUpon>pgBeneficio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgCadastrarBeneficio.xaml.cs">
+      <DependentUpon>pgCadastrarBeneficio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgCadastrarParceria.xaml.cs">
+      <DependentUpon>pgCadastrarParceria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgCliente.xaml.cs">
+      <DependentUpon>pgCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgContratarEmpresa.xaml.cs">
       <DependentUpon>pgContratarEmpresa.xaml</DependentUpon>
     </Compile>
@@ -140,17 +158,50 @@
     <Compile Include="View\pgDetalhesEmpresaContratar.xaml.cs">
       <DependentUpon>pgDetalhesEmpresaContratar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgEditarPerfil.xaml.cs">
+      <DependentUpon>pgEditarPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgExcluiBeneficio.xaml.cs">
+      <DependentUpon>pgExcluiBeneficio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgExcluirClientes.xaml.cs">
+      <DependentUpon>pgExcluirClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgExcluirParceria.xaml.cs">
+      <DependentUpon>pgExcluirParceria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgExcluirPerfil.xaml.cs">
+      <DependentUpon>pgExcluirPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgListaBeneficio.xaml.cs">
+      <DependentUpon>pgListaBeneficio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgListaDeTodasAsEmpresas.xaml.cs">
       <DependentUpon>pgListaDeTodasAsEmpresas.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgListaDeTodosOsClientes.xaml.cs">
       <DependentUpon>pgListaDeTodosOsClientes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgListaParceria.xaml.cs">
+      <DependentUpon>pgListaParceria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgListarClientes.xaml.cs">
+      <DependentUpon>pgListarClientes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgListarEmpresasContratadas.xaml.cs">
       <DependentUpon>pgListarEmpresasContratadas.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgMeuPerfil.xaml.cs">
       <DependentUpon>pgMeuPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgParceria.xaml.cs">
+      <DependentUpon>pgParceria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgPerfil.xaml.cs">
+      <DependentUpon>pgPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgVerPerfil.xaml.cs">
+      <DependentUpon>pgVerPerfil.xaml</DependentUpon>
     </Compile>
     <Page Include="View\frmCadastro.xaml">
       <SubType>Designer</SubType>
@@ -196,6 +247,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgAlteraBeneficio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgAlterarParceria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgBeneficio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgCadastrarBeneficio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgCadastrarParceria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgContratarEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +287,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgEditarPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgExcluiBeneficio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgExcluirClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgExcluirParceria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgExcluirPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgListaBeneficio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgListaDeTodasAsEmpresas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,11 +319,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgListaParceria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgListarClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgListarEmpresasContratadas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgMeuPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgParceria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgVerPerfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

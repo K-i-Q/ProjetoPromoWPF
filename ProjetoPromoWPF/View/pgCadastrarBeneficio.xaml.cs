@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,27 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgCadastrarBeneficio : Page
     {
-        public pgCadastrarBeneficio()
+        Beneficio beneficio;
+        Empresa empresa;
+        public pgCadastrarBeneficio(Empresa e)
         {
             InitializeComponent();
+
+            empresa = new Empresa();
+            beneficio = new Beneficio();
+
+            empresa = e;
+
+        }
+
+        private void BtnCadastrarBeneficio_Click(object sender, RoutedEventArgs e)
+        {
+            beneficio.Nome = txtNome.Text;
+            beneficio.Nivel = Convert.ToInt32(txtNivel.Text);
+            beneficio.Descricao = txtDescricao.Text;
+            beneficio.Empresa = empresa;
+            BeneficioDAO.RegisterBenefit(beneficio);
+            MessageBox.Show("Beneficio " + beneficio.Nome + " cadastrado para empresa " + beneficio.Empresa.Razao);
         }
     }
 }

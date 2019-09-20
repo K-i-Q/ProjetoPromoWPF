@@ -8,27 +8,20 @@ using System.Threading.Tasks;
 
 namespace ProjetoPromoWPF.Model
 {
-    [Table("Empresas")]
-    public class Empresa
+    [Table("Beneficios")]
+    public class Beneficio
     {
         [Key]
-        public int EmpresaId { get; set; }
-        public string CNPJ { get; set; }
-        public string Razao { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
-        public string Telefone { get; set; }
+        public int BeneficioId { get; set; }
+        public string Nome { get; set; }
+        public int Nivel { get; set; }
+        public string Descricao { get; set; }
         public DateTime CriadoEm { get; set; }
-        public List<EmpresaCliente> EmpresaCliente { get; set; }
-        public List<Plano> Planos { get; set; }
-        public List<Beneficio> Beneficios { get; set; }
+        public Empresa Empresa { get; set; }
 
-
-        public Empresa()
+        public Beneficio()
         {
             CriadoEm = DateTime.Now;
-            EmpresaCliente = new List<EmpresaCliente>();
-
         }
 
 
@@ -39,16 +32,16 @@ namespace ProjetoPromoWPF.Model
             sb.Append("________________________________________");
             sb.Append("\n| ");
             sb.Append("Nome: ");
-            sb.Append(Razao.ToUpper());
+            sb.Append(Nome);
             sb.Append("\n| ");
-            sb.Append("Email: ");
-            sb.Append(Email.ToUpper());
+            sb.Append("Nivel: ");
+            sb.Append(Nivel);
             sb.Append("\n| ");
-            sb.Append("Telefone: ");
-            sb.Append(Telefone);
+            sb.Append("Descrição: ");
+            sb.Append(Descricao);
             sb.Append("\n| ");
-            sb.Append("Planos: ");
-            sb.Append(Planos);
+            sb.Append("Empresa: ");
+            sb.Append(Empresa);
             sb.Append("\n| ");
             sb.Append("Cadastrado em: ");
             sb.Append(CriadoEm);
@@ -58,8 +51,8 @@ namespace ProjetoPromoWPF.Model
 
         public override bool Equals(object obj)
         {
-            Empresa e = (Empresa)obj;
-            return Razao == e.Razao;
+            Beneficio b = (Beneficio)obj;
+            return BeneficioId == b.BeneficioId;
         }
     }
 }

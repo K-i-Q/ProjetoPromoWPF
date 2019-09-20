@@ -20,11 +20,12 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeEmpresa : Window
     {
+        Empresa empresa;
         public HomeEmpresa(Empresa e)
         {
             InitializeComponent();
-            Empresa empresa = e;
-            MessageBox.Show("Empresa: " + e.Razao);
+            empresa = new Empresa();
+            empresa = e;
         }
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {
@@ -51,7 +52,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnBeneficios_Click(object sender, RoutedEventArgs e)
         {
-            fmEmpresa.Content = new pgBeneficio();
+            fmEmpresa.Content = new pgBeneficio(empresa);
         }
     }
 }

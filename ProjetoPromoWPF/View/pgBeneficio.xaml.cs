@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,23 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgBeneficio : Page
     {
-        public pgBeneficio()
+        Empresa empresa;
+        public pgBeneficio(Empresa e)
         {
             InitializeComponent();
+
+            empresa = new Empresa();
+            empresa = e;
         }
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            fmBeneficio.Content = new pgCadastrarBeneficio();
+            fmBeneficio.Content = new pgCadastrarBeneficio(empresa);
         }
 
         private void BtnListar_Click(object sender, RoutedEventArgs e)
         {
-            fmBeneficio.Content = new pgListaBeneficio();
+            fmBeneficio.Content = new pgListaBeneficio(empresa);
         }
 
         private void BtnAlterar_Click(object sender, RoutedEventArgs e)

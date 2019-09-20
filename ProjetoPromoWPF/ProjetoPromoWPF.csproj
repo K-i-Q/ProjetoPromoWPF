@@ -67,6 +67,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DAL\AdministradorDAO.cs" />
+    <Compile Include="DAL\BeneficioDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\EmpresaClienteDAO.cs" />
     <Compile Include="DAL\EmpresaDAO.cs" />
@@ -88,8 +89,13 @@
     <Compile Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.Designer.cs">
       <DependentUpon>201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909201536595_AddClassBeneficio.cs" />
+    <Compile Include="Migrations\201909201536595_AddClassBeneficio.Designer.cs">
+      <DependentUpon>201909201536595_AddClassBeneficio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
+    <Compile Include="Model\Beneficio.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Context.cs" />
     <Compile Include="Model\Empresa.cs" />
@@ -373,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.resx">
       <DependentUpon>201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909201536595_AddClassBeneficio.resx">
+      <DependentUpon>201909201536595_AddClassBeneficio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

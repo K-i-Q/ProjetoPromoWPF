@@ -9,8 +9,29 @@
       Title="pgListaBeneficio">
 
     <Grid>
-        <TextBlock Text="Listar Beneficio"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <ListView x:Name="listaBeneficios">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="ID: " />
+                            <TextBlock Text="{Binding BeneficioId}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nome: " />
+                            <TextBlock Text="{Binding Nome}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nível: " />
+                            <TextBlock Text="{Binding Nivel}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Descrição: " />
+                            <TextBlock Text="{Binding Descricao}" />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

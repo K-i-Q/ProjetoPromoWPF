@@ -19,7 +19,7 @@ namespace ProjetoPromoWPF.Model
         public Empresa EmpresaDois { get; set; }
         public DateTime CriadoEm { get; set; }
 
-        EmpresaEmpresa()
+        public EmpresaEmpresa()
         {
             CriadoEm = DateTime.Now;
         }

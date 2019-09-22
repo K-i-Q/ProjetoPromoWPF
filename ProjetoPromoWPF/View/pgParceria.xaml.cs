@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,17 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgParceria : Page
     {
-        public pgParceria()
+        Empresa empresa;
+        public pgParceria(Empresa e)
         {
             InitializeComponent();
+
+            empresa = e;
         }
 
         private void BtnCadastrarParceria_Click(object sender, RoutedEventArgs e)
         {
-            fmParceria.Content = new pgCadastrarParceria();
+            fmParceria.Content = new pgCadastrarParceria(empresa);
         }
 
         private void BtnListarParceria_Click(object sender, RoutedEventArgs e)

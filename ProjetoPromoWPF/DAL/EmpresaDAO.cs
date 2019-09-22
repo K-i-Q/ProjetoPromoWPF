@@ -12,42 +12,34 @@ namespace ProjetoPromoWPF.DAL
     {
         private static Context ctx = SingletonContext.GetInstance();
 
-        //ADD new Company
+
         public static void RegisterCompany(Empresa empresa)
         {
             ctx.Empresas.Add(empresa);
             ctx.SaveChanges();
         }
-        //List all Companies
+
         public static List<Empresa> ShowCompanies() => ctx.Empresas.ToList();
-        //Remove a Company
+
         public static void RemoveCompany(Empresa empresa)
         {
             ctx.Empresas.Remove(FindCompany(empresa));
             ctx.SaveChanges();
         }
-        //Find Company
-        public static Empresa FindCompany(Empresa empresa)
-        {
-            return ctx.Empresas.FirstOrDefault(x => x.Email.Equals(empresa.Email));
-        }
-        public static Empresa FindCompany(string email)
-        {
-            return ctx.Empresas.FirstOrDefault(x => x.Email.Equals(email));
-        }
-        //find Company by ID
-        public static Empresa FindCompanyById(int id)
-        {
-            foreach (Empresa empresa in ShowCompanies())
-            {
-                if (empresa.EmpresaId == id)
-                {
-                    return empresa;
-                }
-            }
-            return null;
-        }
-        //Edit a Company
+
+        public static Empresa FindCompany(Empresa empresa) => ctx.Empresas.FirstOrDefault(x => x.Email.Equals(empresa.Email));
+
+
+        public static Empresa FindCompanyByEmail(string email) => ctx.Empresas.FirstOrDefault(x => x.Email.Equals(email));
+
+
+        public static Empresa FindCompanyById(int id) => ctx.Empresas.FirstOrDefault(x => x.EmpresaId.Equals(id));
+
+
+        public static Empresa FindCompanyByName(string nome) => ctx.Empresas.FirstOrDefault(x => x.Razao.Contains(nome));
+       
+
+
         public static void EditCompany(Empresa empresa)
         {
             ctx.Entry(empresa).State = EntityState.Modified;

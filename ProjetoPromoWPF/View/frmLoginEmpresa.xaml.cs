@@ -39,7 +39,7 @@ namespace ProjetoPromoWPF.View
             Empresa empresa;
             string senha = txtSenha.Text;
 
-            empresa = EmpresaDAO.FindCompany(txtEmail.Text);
+            empresa = EmpresaDAO.FindCompanyByEmail(txtEmail.Text);
 
             if (empresa != null)
             {

@@ -45,25 +45,11 @@
                          Margin="0,0,0,10" 
                          MinWidth="150" />
             </WrapPanel>
-            <WrapPanel>
-                <TextBlock Text="Nivel:" 
-                           Margin="0,0,10,10"/>
-                <TextBox x:Name="txtNivel" 
-                         Margin="0,0,0,10" 
-                         MinWidth="150" />
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock Text="Descrição:" 
-                           Margin="0,0,10,10" />
-                <TextBox x:Name="txtDescricao"  
-                         Margin="0,0,0,10" 
-                         MinWidth="150" />
-            </WrapPanel>
 
-            <Button x:Name="btnCadastrarBeneficio" 
+            <Button x:Name="btnCadastrarParceria" 
                     Margin="10" 
                     Content="Cadastrar"
-                    
+                    Click="BtnCadastrarParceria_Click" 
                     />
 
         </StackPanel>

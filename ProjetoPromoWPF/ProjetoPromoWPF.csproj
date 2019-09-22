@@ -93,6 +93,10 @@
     <Compile Include="Migrations\201909201536595_AddClassBeneficio.Designer.cs">
       <DependentUpon>201909201536595_AddClassBeneficio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs" />
+    <Compile Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.Designer.cs">
+      <DependentUpon>201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Beneficio.cs" />
@@ -149,6 +153,9 @@
     <Compile Include="View\pgCadastrarParceria.xaml.cs">
       <DependentUpon>pgCadastrarParceria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgCadastrarPlano.xaml.cs">
+      <DependentUpon>pgCadastrarPlano.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgCliente.xaml.cs">
       <DependentUpon>pgCliente.xaml</DependentUpon>
     </Compile>
@@ -167,6 +174,9 @@
     <Compile Include="View\pgEditarPerfil.xaml.cs">
       <DependentUpon>pgEditarPerfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgEditarPlano.xaml.cs">
+      <DependentUpon>pgEditarPlano.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgExcluiBeneficio.xaml.cs">
       <DependentUpon>pgExcluiBeneficio.xaml</DependentUpon>
     </Compile>
@@ -178,6 +188,9 @@
     </Compile>
     <Compile Include="View\pgExcluirPerfil.xaml.cs">
       <DependentUpon>pgExcluirPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgExcluirPlano.xaml.cs">
+      <DependentUpon>pgExcluirPlano.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgListaBeneficio.xaml.cs">
       <DependentUpon>pgListaBeneficio.xaml</DependentUpon>
@@ -197,6 +210,9 @@
     <Compile Include="View\pgListarEmpresasContratadas.xaml.cs">
       <DependentUpon>pgListarEmpresasContratadas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgListarPlano.xaml.cs">
+      <DependentUpon>pgListarPlano.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgMeuPerfil.xaml.cs">
       <DependentUpon>pgMeuPerfil.xaml</DependentUpon>
     </Compile>
@@ -205,6 +221,9 @@
     </Compile>
     <Compile Include="View\pgPerfil.xaml.cs">
       <DependentUpon>pgPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgPlano.xaml.cs">
+      <DependentUpon>pgPlano.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgVerPerfil.xaml.cs">
       <DependentUpon>pgVerPerfil.xaml</DependentUpon>
@@ -273,6 +292,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgCadastrarPlano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -297,6 +320,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgEditarPlano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgExcluiBeneficio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -310,6 +337,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgExcluirPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgExcluirPlano.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -337,6 +368,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgListarPlano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgMeuPerfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -346,6 +381,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgPlano.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -382,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909201536595_AddClassBeneficio.resx">
       <DependentUpon>201909201536595_AddClassBeneficio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.resx">
+      <DependentUpon>201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

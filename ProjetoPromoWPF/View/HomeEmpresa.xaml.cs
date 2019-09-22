@@ -54,5 +54,10 @@ namespace ProjetoPromoWPF.View
         {
             fmEmpresa.Content = new pgBeneficio(empresa);
         }
+
+        private void BtnPlanos_Click(object sender, RoutedEventArgs e)
+        {
+            fmEmpresa.Content = new pgPlano(empresa);
+        }
     }
 }

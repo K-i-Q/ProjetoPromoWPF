@@ -14,7 +14,7 @@ namespace ProjetoPromoWPF.Model
         [Key]
         public int PlanoId { get; set; }
         public string Nome { get; set; }
-        public float Preco { get; set; }
+        public double Preco { get; set; }
         public string Descricao { get; set; }
         public Empresa Empresa { get; set; }
 

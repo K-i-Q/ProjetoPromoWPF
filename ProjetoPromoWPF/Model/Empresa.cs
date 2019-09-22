@@ -19,8 +19,10 @@ namespace ProjetoPromoWPF.Model
         public string Senha { get; set; }
         public string Telefone { get; set; }
         public DateTime CriadoEm { get; set; }
+
         public List<EmpresaCliente> EmpresaCliente { get; set; }
         public List<Plano> Planos { get; set; }
+        public List<Empresa> Empresas { get; set; }
         public List<Beneficio> Beneficios { get; set; }
 
 

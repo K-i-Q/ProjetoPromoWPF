@@ -71,6 +71,7 @@
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\EmpresaClienteDAO.cs" />
     <Compile Include="DAL\EmpresaDAO.cs" />
+    <Compile Include="DAL\EmpresaEmpresaDAO.cs" />
     <Compile Include="DAL\PlanoDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.cs" />
@@ -97,6 +98,10 @@
     <Compile Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.Designer.cs">
       <DependentUpon>201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909222303214_AddClassEmpresaEmpresa.cs" />
+    <Compile Include="Migrations\201909222303214_AddClassEmpresaEmpresa.Designer.cs">
+      <DependentUpon>201909222303214_AddClassEmpresaEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Beneficio.cs" />
@@ -104,6 +109,7 @@
     <Compile Include="Model\Context.cs" />
     <Compile Include="Model\Empresa.cs" />
     <Compile Include="Model\EmpresaCliente.cs" />
+    <Compile Include="Model\EmpresaEmpresa.cs" />
     <Compile Include="Model\Plano.cs" />
     <Compile Include="View\frmCadastro.xaml.cs">
       <DependentUpon>frmCadastro.xaml</DependentUpon>
@@ -424,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.resx">
       <DependentUpon>201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909222303214_AddClassEmpresaEmpresa.resx">
+      <DependentUpon>201909222303214_AddClassEmpresaEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

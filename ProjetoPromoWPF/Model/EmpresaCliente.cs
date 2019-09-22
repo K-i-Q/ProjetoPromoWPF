@@ -24,10 +24,6 @@ namespace ProjetoPromoWPF.Model
         public EmpresaCliente()
         {
             ContratadaEm = DateTime.Now;
-
-            Cliente = new Cliente();
-            Empresa = new Empresa();
-            Plano = new Plano();
         }
     }
 }

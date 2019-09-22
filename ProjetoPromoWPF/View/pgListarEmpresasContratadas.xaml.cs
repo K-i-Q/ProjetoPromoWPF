@@ -22,8 +22,8 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgListarEmpresasContratadas : Page
     {
-        Cliente cliente = new Cliente();
-        Empresa empresa= new Empresa();
+        Cliente cliente;
+        Empresa empresa;
         Context ctx = SingletonContext.GetInstance();
 
         public pgListarEmpresasContratadas(Cliente c)

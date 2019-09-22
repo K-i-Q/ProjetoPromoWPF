@@ -35,12 +35,16 @@ namespace ProjetoPromoWPF.View
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Cliente cliente = new Cliente();
+            Cliente cliente;
             HomeCliente home;
             string senha = txtSenha.Text;
 
-            cliente.Email = txtEmail.Text;
-            cliente = ClienteDAO.FindClient(cliente);
+            //Encontra cliente por string
+            cliente = ClienteDAO.FindClient(txtEmail.Text);
+
+            ////Encontra cliente por objeto
+            //cliente.Email = txtEmail.Text;
+            //cliente = ClienteDAO.FindClient(cliente);
 
             if (cliente != null)
             {

@@ -23,10 +23,10 @@ namespace ProjetoPromoWPF.View
     public partial class pgDetalhesEmpresaContratar : Page
     {
         Context ctx = SingletonContext.GetInstance();
-        Empresa empresa = new Empresa();
-        Cliente cliente = new Cliente();
-        Plano plano = new Plano();
-        EmpresaCliente empresaCliente = new EmpresaCliente();
+        Empresa empresa;
+        Cliente cliente;
+        Plano plano;
+        EmpresaCliente empresaCliente;
 
         public pgDetalhesEmpresaContratar(Empresa e, Cliente c)
         {
@@ -51,6 +51,8 @@ namespace ProjetoPromoWPF.View
 
             if (MessageBox.Show("Deseja contratar o plano " + plano.Nome + "?", "Contratar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
+                empresaCliente = new EmpresaCliente();
+
                 empresaCliente.ClienteId = cliente.ClienteId;
                 empresaCliente.Cliente = cliente;
                 empresaCliente.EmpresaId = empresa.EmpresaId;

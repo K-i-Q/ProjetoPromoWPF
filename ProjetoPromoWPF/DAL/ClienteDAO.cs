@@ -30,15 +30,10 @@ namespace ProjetoPromoWPF.DAL
         public static Cliente FindClient(Cliente cliente)
         {
             return ctx.Clientes.FirstOrDefault(x => x.Email.Equals(cliente.Email));
-
-            //foreach (Cliente c in ShowClients())
-            //{
-            //    if (cliente == c)
-            //    {
-            //        return c;
-            //    }
-            //}
-            //return null;
+        }
+        public static Cliente FindClient(string email)
+        {
+            return ctx.Clientes.FirstOrDefault(x => x.Email.Equals(email));
         }
         //Edit a Client
         public static void EditClient(Cliente cliente)

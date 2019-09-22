@@ -26,7 +26,6 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresa = new Empresa();
             empresa = e;
         }
 

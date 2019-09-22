@@ -28,15 +28,13 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresa = new Empresa();
-            beneficio = new Beneficio();
-
             empresa = e;
 
         }
 
         private void BtnCadastrarBeneficio_Click(object sender, RoutedEventArgs e)
         {
+            beneficio = new Beneficio();
             beneficio.Nome = txtNome.Text;
             beneficio.Nivel = Convert.ToInt32(txtNivel.Text);
             beneficio.Descricao = txtDescricao.Text;

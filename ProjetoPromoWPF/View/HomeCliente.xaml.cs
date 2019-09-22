@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,9 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeCliente : Window
     {
-        Cliente cliente = new Cliente();
+        Cliente cliente;
+        private static Context ctx = SingletonContext.GetInstance();
+
         public HomeCliente(Cliente c)
         {
             InitializeComponent();
@@ -31,6 +34,8 @@ namespace ProjetoPromoWPF.View
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
+
+            SingletonContext.CloseContext();
 
             frmLogin.Show();
             this.Close();

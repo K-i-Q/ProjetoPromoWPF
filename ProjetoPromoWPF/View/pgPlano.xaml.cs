@@ -25,8 +25,6 @@ namespace ProjetoPromoWPF.View
         public pgPlano(Empresa e)
         {
             InitializeComponent();
-
-            empresa = new Empresa();
             empresa = e;
         }
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)

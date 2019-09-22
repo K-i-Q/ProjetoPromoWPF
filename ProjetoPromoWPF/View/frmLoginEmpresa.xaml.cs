@@ -36,11 +36,10 @@ namespace ProjetoPromoWPF.View
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             HomeEmpresa home;
-            Empresa empresa = new Empresa();
+            Empresa empresa;
             string senha = txtSenha.Text;
 
-            empresa.Email = txtEmail.Text;
-            empresa = EmpresaDAO.FindCompany(empresa);
+            empresa = EmpresaDAO.FindCompany(txtEmail.Text);
 
             if (empresa != null)
             {

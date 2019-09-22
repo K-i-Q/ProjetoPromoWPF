@@ -27,14 +27,14 @@ namespace ProjetoPromoWPF.View
         public pgCadastrarPlano(Empresa e)
         {
             InitializeComponent();
-            empresa = new Empresa();
-            plano = new Plano();
 
             empresa = e;
         }
 
         private void BtnCadastrarPlano_Click(object sender, RoutedEventArgs e)
         {
+            plano = new Plano();
+
             plano.Nome = txtNome.Text;
             plano.Preco = Convert.ToDouble(txtPreco.Text);
             plano.Descricao = txtDescricao.Text;

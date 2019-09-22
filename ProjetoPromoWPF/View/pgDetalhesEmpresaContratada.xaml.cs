@@ -22,10 +22,10 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgDetalhesEmpresaContratada : Page
     {
-        EmpresaCliente empresaCliente = new EmpresaCliente();
-        Cliente cliente = new Cliente();
-        Empresa empresa = new Empresa();
-        Plano plano = new Plano();
+        EmpresaCliente empresaCliente;
+        Cliente cliente;
+        Empresa empresa;
+        Plano plano;
 
         public pgDetalhesEmpresaContratada(Empresa e, Cliente c)
         {

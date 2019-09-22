@@ -21,5 +21,10 @@ namespace ProjetoPromoWPF.DAL
             }
             return ctx;
         }
+
+        public static void CloseContext()
+        {
+            ctx = null;
+        }
     }
 }

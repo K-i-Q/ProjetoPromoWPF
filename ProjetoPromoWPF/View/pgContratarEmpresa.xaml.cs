@@ -22,9 +22,8 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgContratarEmpresa : Page
     {
-        Cliente cliente = new Cliente();
-        Empresa empresa = new Empresa();
-        EmpresaCliente empresaCliente = new EmpresaCliente();
+        Cliente cliente;
+        Empresa empresa;
         Context ctx = SingletonContext.GetInstance();
 
         public pgContratarEmpresa(Cliente c)
@@ -41,7 +40,6 @@ namespace ProjetoPromoWPF.View
         {
             Button button = sender as Button;
             empresa = button.DataContext as Empresa;
-
 
             fmDetalhesEmpresaContratar.Content = new pgDetalhesEmpresaContratar(empresa, cliente);
         }

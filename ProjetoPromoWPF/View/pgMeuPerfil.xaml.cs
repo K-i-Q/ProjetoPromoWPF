@@ -21,7 +21,7 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgMeuPerfil : Page
     {
-        Cliente cliente = new Cliente();
+        Cliente cliente;
         public pgMeuPerfil(Cliente c)
         {
             InitializeComponent();

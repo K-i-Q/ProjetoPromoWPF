@@ -21,17 +21,19 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeAdm : Window
     {
+        private static Context ctx = SingletonContext.GetInstance();
+
         public HomeAdm()
         {
             InitializeComponent();
             
         }
 
-       
-
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
+
+            SingletonContext.CloseContext();
 
             frmLogin.Show();
             this.Close();

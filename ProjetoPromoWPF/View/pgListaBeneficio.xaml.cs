@@ -26,7 +26,6 @@ namespace ProjetoPromoWPF.View
         public pgListaBeneficio(Empresa e)
         {
             InitializeComponent();
-            empresa = new Empresa();
             empresa = e;
             listarBeneficios(empresa);
         }

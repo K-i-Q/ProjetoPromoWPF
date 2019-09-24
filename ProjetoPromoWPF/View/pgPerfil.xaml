@@ -29,6 +29,11 @@
         <StackPanel Grid.Column="1"
                     Grid.Row="1"
                     >
+            <TextBlock Text="Perfil" 
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"
+                       />
             <Button Content="Ver"
                     Margin="0,0,0,10"
                     x:Name="btnVer" Click="BtnVer_Click"

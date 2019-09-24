@@ -9,6 +9,25 @@
       Title="pgListarPlano">
 
     <Grid>
-        
+        <ListView x:Name="listaPlanos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nome: " />
+                            <TextBlock Text="{Binding Nome}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nível: " />
+                            <TextBlock Text="{Binding Descricao}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Descrição: " />
+                            <TextBlock Text="{Binding Preco}" />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,18 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgListarPlano : Page
     {
-        public pgListarPlano()
+        Empresa empresa;
+        public pgListarPlano(Empresa e)
         {
             InitializeComponent();
+            empresa = e;
+            listarPlanos(empresa);
+        }
+
+        private void listarPlanos(Empresa empresa)
+        {
+            Context ctx = SingletonContext.GetInstance();
+            listaPlanos.ItemsSource = ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(empresa.EmpresaId)).ToList();
         }
     }
 }

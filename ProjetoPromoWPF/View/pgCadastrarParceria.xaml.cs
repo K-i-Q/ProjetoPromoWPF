@@ -39,9 +39,9 @@ namespace ProjetoPromoWPF.View
             parceria = new EmpresaEmpresa();
 
             parceria.EmpresaUmId = empresaUm.EmpresaId;
-            parceria.EmpresaUm = empresaUm;
+            parceria.EmpresaUm = EmpresaDAO.FindCompanyById(empresaUm.EmpresaId);
             parceria.EmpresaDoisId = empresaDois.EmpresaId;
-            parceria.EmpresaDois = empresaDois;
+            parceria.EmpresaDois = EmpresaDAO.FindCompanyById(empresaDois.EmpresaId);
             if (!parceria.EmpresaUm.Equals(parceria.EmpresaDois))
             {
                 EmpresaEmpresaDAO.RegisterPartner(parceria);

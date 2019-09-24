@@ -9,8 +9,29 @@
       Title="pgListaParceria">
 
     <Grid>
-        <TextBlock Text="Listar Parceria"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <ListView x:Name="listaParceria">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="CNPJ: " />
+                            <TextBlock Text="{Binding CNPJ}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Razao: " />
+                            <TextBlock Text="{Binding Razao}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Telefone: " />
+                            <TextBlock Text="{Binding Telefone}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Email: " />
+                            <TextBlock Text="{Binding Email}" />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

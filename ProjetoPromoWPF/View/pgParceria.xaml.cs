@@ -36,7 +36,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnListarParceria_Click(object sender, RoutedEventArgs e)
         {
-            fmParceria.Content = new pgListaParceria();
+            fmParceria.Content = new pgListaParceria(empresa);
         }
 
         private void BtnAlterarParceria_Click(object sender, RoutedEventArgs e)

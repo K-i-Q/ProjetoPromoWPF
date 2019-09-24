@@ -46,7 +46,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnClientes_Click(object sender, RoutedEventArgs e)
         {
-            fmEmpresa.Content = new pgCliente();
+            fmEmpresa.Content = new pgCliente(empresa);
         }
 
         private void BtnPerfil_Click(object sender, RoutedEventArgs e)

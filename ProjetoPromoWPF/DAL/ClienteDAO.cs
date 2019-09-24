@@ -31,10 +31,15 @@ namespace ProjetoPromoWPF.DAL
         {
             return ctx.Clientes.FirstOrDefault(x => x.Email.Equals(cliente.Email));
         }
+        public static Cliente FindClientById(int id)
+        {
+            return ctx.Clientes.FirstOrDefault(x => x.ClienteId.Equals(id));
+        }
         public static Cliente FindClient(string email)
         {
             return ctx.Clientes.FirstOrDefault(x => x.Email.Equals(email));
         }
+
         //Edit a Client
         public static void EditClient(Cliente cliente)
         {

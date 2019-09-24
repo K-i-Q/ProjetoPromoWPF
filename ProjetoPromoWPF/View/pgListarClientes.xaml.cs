@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,28 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgListarClientes : Page
     {
-        public pgListarClientes()
+        Empresa empresa;
+        public pgListarClientes(Empresa e)
         {
             InitializeComponent();
+
+            empresa = e;
+
+            listaDeClientesDaEmpresa(empresa);
+        }
+
+        private void listaDeClientesDaEmpresa(Empresa empresa)
+        {
+            Context ctx = SingletonContext.GetInstance();
+            List<EmpresaCliente> listaDeContratacoes = ctx.EmpresaCliente.Where(x => x.Empresa.EmpresaId.Equals(empresa.EmpresaId)).ToList();
+            List<Cliente> listaDeClientesDaEmpresa = new List<Cliente>();
+
+            foreach (EmpresaCliente contratacao in listaDeContratacoes)
+            {
+                listaDeClientesDaEmpresa.Add(ClienteDAO.FindClientById(contratacao.ClienteId));
+            }
+            
+            listaClientesDaEmpresa.ItemsSource = listaDeClientesDaEmpresa;
         }
     }
 }

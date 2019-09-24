@@ -9,9 +9,29 @@
       Title="pgListarClientes">
 
     <Grid>
-        <TextBlock Text="Listar Clientes"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   />
+        <ListView x:Name="listaClientesDaEmpresa">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="CPF: " />
+                            <TextBlock Text="{Binding CPF}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nome: " />
+                            <TextBlock Text="{Binding Nome}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Telefone: " />
+                            <TextBlock Text="{Binding Telefone}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Email: " />
+                            <TextBlock Text="{Binding Email}" />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

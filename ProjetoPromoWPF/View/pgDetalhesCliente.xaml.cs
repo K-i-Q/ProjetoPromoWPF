@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,12 @@ namespace ProjetoPromoWPF.View
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            cliente.Nome = txtNome.Text;
+            cliente.Email = txtEmail.Text;
+            cliente.Genero = txtGenero.Text;
+            cliente.Telefone = txtTelefone.Text;
+            ClienteDAO.EditClient(cliente);
+            MessageBox.Show("Alterações para " + cliente.Nome + " realizadas com sucesso!");
 
         }
     }

@@ -7,13 +7,13 @@ namespace ProjetoPromoWPF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CriacaoBancoDeDados : IMigrationMetadata
+    public sealed partial class CriacaoDoBanco : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CriacaoBancoDeDados));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CriacaoDoBanco));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909122327523_CriacaoBancoDeDados"; }
+            get { return "201909251843155_CriacaoDoBanco"; }
         }
         
         string IMigrationMetadata.Source

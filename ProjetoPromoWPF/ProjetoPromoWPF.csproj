@@ -74,33 +74,9 @@
     <Compile Include="DAL\EmpresaEmpresaDAO.cs" />
     <Compile Include="DAL\PlanoDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
-    <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.cs" />
-    <Compile Include="Migrations\201909122327523_CriacaoBancoDeDados.Designer.cs">
-      <DependentUpon>201909122327523_CriacaoBancoDeDados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs" />
-    <Compile Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.Designer.cs">
-      <DependentUpon>201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909152107009_AddPropertyPlanoToClassEmpresaCliente.cs" />
-    <Compile Include="Migrations\201909152107009_AddPropertyPlanoToClassEmpresaCliente.Designer.cs">
-      <DependentUpon>201909152107009_AddPropertyPlanoToClassEmpresaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs" />
-    <Compile Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.Designer.cs">
-      <DependentUpon>201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909201536595_AddClassBeneficio.cs" />
-    <Compile Include="Migrations\201909201536595_AddClassBeneficio.Designer.cs">
-      <DependentUpon>201909201536595_AddClassBeneficio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs" />
-    <Compile Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.Designer.cs">
-      <DependentUpon>201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909222303214_AddClassEmpresaEmpresa.cs" />
-    <Compile Include="Migrations\201909222303214_AddClassEmpresaEmpresa.Designer.cs">
-      <DependentUpon>201909222303214_AddClassEmpresaEmpresa.cs</DependentUpon>
+    <Compile Include="Migrations\201909251843155_CriacaoDoBanco.cs" />
+    <Compile Include="Migrations\201909251843155_CriacaoDoBanco.Designer.cs">
+      <DependentUpon>201909251843155_CriacaoDoBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
@@ -434,26 +410,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201909122327523_CriacaoBancoDeDados.resx">
-      <DependentUpon>201909122327523_CriacaoBancoDeDados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909151743501_AddPlanoClassAndLinkToEmpresaClass.resx">
-      <DependentUpon>201909151743501_AddPlanoClassAndLinkToEmpresaClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909152107009_AddPropertyPlanoToClassEmpresaCliente.resx">
-      <DependentUpon>201909152107009_AddPropertyPlanoToClassEmpresaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909152247587_AddAttributePlanoIdToClassEmpresaCliente.resx">
-      <DependentUpon>201909152247587_AddAttributePlanoIdToClassEmpresaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909201536595_AddClassBeneficio.resx">
-      <DependentUpon>201909201536595_AddClassBeneficio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.resx">
-      <DependentUpon>201909221528205_ChangePropertyTypePrecoToDoubleClassPlano.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909222303214_AddClassEmpresaEmpresa.resx">
-      <DependentUpon>201909222303214_AddClassEmpresaEmpresa.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909251843155_CriacaoDoBanco.resx">
+      <DependentUpon>201909251843155_CriacaoDoBanco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

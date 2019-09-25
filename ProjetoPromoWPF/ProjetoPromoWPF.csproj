@@ -153,6 +153,9 @@
     <Compile Include="View\pgBeneficio.xaml.cs">
       <DependentUpon>pgBeneficio.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgBeneficioDoCliente.xaml.cs">
+      <DependentUpon>pgBeneficioDoCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgCadastrarBeneficio.xaml.cs">
       <DependentUpon>pgCadastrarBeneficio.xaml</DependentUpon>
     </Compile>
@@ -171,6 +174,9 @@
     <Compile Include="View\pgDetalhesCliente.xaml.cs">
       <DependentUpon>pgDetalhesCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgDetalhesDoBeneficioDoCliente.xaml.cs">
+      <DependentUpon>pgDetalhesDoBeneficioDoCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgDetalhesEmpresaContratada.xaml.cs">
       <DependentUpon>pgDetalhesEmpresaContratada.xaml</DependentUpon>
     </Compile>
@@ -182,6 +188,9 @@
     </Compile>
     <Compile Include="View\pgEditarPlano.xaml.cs">
       <DependentUpon>pgEditarPlano.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgEmpresasContratadas.xaml.cs">
+      <DependentUpon>pgEmpresasContratadas.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgExcluiBeneficio.xaml.cs">
       <DependentUpon>pgExcluiBeneficio.xaml</DependentUpon>
@@ -290,6 +299,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgBeneficioDoCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgCadastrarBeneficio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -314,6 +327,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\pgDetalhesDoBeneficioDoCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\pgDetalhesEmpresaContratada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -327,6 +344,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgEditarPlano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgEmpresasContratadas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

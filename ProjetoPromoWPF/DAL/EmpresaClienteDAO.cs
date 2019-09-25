@@ -19,6 +19,7 @@ namespace ProjetoPromoWPF.DAL
         }
 
         public static List<EmpresaCliente> ShowAllCompanyClient() => ctx.EmpresaCliente.ToList();
+
         public static EmpresaCliente ShowHiring(EmpresaCliente ec)
         {
             foreach (EmpresaCliente contratacao in ShowAllCompanyClient())

@@ -33,7 +33,7 @@ namespace ProjetoPromoWPF.DAL
         public static Empresa FindCompanyByEmail(string email) => ctx.Empresas.FirstOrDefault(x => x.Email.Equals(email));
 
 
-        public static Empresa FindCompanyById(int id) => ctx.Empresas.FirstOrDefault(x => x.EmpresaId.Equals(id));
+        public static Empresa FindCompanyById(int id) => ctx.Empresas.Find(id);
 
 
         public static Empresa FindCompanyByName(string nome) => ctx.Empresas.FirstOrDefault(x => x.Razao.Contains(nome));

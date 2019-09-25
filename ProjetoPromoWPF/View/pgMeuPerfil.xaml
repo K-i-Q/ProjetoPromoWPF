@@ -57,11 +57,13 @@
             <WrapPanel>
                 <Button x:Name="btnExcluir"
                         Content="Excluir" 
-                        Margin="10,10,10,0" Click="BtnExcluir_Click"
+                        Margin="10,10,10,0" 
+                        Click="BtnExcluir_Click"
                         />
                 <Button x:Name="btnEditar"
                         Content="Editar"
-                        Margin="10,10,10,0" Click="BtnEditar_Click"
+                        Margin="10,10,10,0" 
+                        Click="BtnEditar_Click"
                         />
             </WrapPanel>
         </StackPanel>

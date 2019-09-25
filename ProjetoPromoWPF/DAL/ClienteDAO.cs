@@ -33,7 +33,8 @@ namespace ProjetoPromoWPF.DAL
         }
         public static Cliente FindClientById(int id)
         {
-            return ctx.Clientes.FirstOrDefault(x => x.ClienteId.Equals(id));
+            //return ctx.Clientes.FirstOrDefault(x => x.ClienteId.Equals(id));
+            return ctx.Clientes.Find(id);
         }
         public static Cliente FindClient(string email)
         {

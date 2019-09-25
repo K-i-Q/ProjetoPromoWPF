@@ -55,5 +55,10 @@ namespace ProjetoPromoWPF.View
         {
             fmCliente.Content = new pgMeuPerfil(cliente);
         }
+
+        private void BtnBeneficios_Click(object sender, RoutedEventArgs e)
+        {
+            fmCliente.Content = new pgBeneficioDoCliente(cliente);
+        }
     }
 }

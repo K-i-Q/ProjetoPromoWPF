@@ -31,9 +31,10 @@ namespace ProjetoPromoWPF.DAL
         {
             return ctx.Planos.FirstOrDefault(x => x.PlanoId.Equals(plano.PlanoId));
         }
-        public static Plano FindPlanById(int plano)
+        public static Plano FindPlanById(int id)
         {
-            return ctx.Planos.FirstOrDefault(x => x.PlanoId.Equals(plano));
+            //return ctx.Planos.FirstOrDefault(x => x.PlanoId.Equals(plano));
+            return ctx.Planos.Find(id);
         }
 
         public static void EditPlan(Plano plano)

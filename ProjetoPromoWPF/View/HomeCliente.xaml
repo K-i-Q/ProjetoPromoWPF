@@ -16,28 +16,42 @@
                NavigationUIVisibility="Hidden"               
                />
         <Button x:Name="btnListarEmpresas" 
-                Content="Listar Empresas"
+                Content="Empresas"
                 FontSize="11" 
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Left"
-                Margin="10,55,0,0" Click="BtnListarEmpresas_Click" 
+                Margin="10,55,0,0" 
+                Click="BtnListarEmpresas_Click" 
                 />
         <Button x:Name="btnListarEmpresasContratadas" 
-                Content="Empresas Contratadas"
+                Content="Contratadas"
                 FontSize="11" 
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Left"
-                Margin="100,55,0,0" Click="BtnListarEmpresasContratadas_Click" 
+                Margin="70,55,0,0" 
+                Click="BtnListarEmpresasContratadas_Click" 
                 />
         <Button x:Name="btnMeuPerfil" 
-                Content="Meu Perfil"
+                Content="Perfil"
                 FontSize="11" 
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Left"
-                Margin="220,55,0,0" Click="BtnMeuPerfil_Click" 
+                Margin="140,55,0,0" 
+                Click="BtnMeuPerfil_Click" 
                 />
-
-        <Button x:Name="btnSair" Content="Sair" FontSize="22" HorizontalAlignment="Center"
-                VerticalAlignment="Bottom" Click="BtnSair_Click" />
+        <Button x:Name="btnBeneficios" 
+                Content="Benefícios"
+                FontSize="11" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                Margin="175,55,0,0" 
+                Click="BtnBeneficios_Click"
+                />
+        <Button x:Name="btnSair" 
+                Content="Sair" 
+                FontSize="22" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom" 
+                Click="BtnSair_Click" />
     </Grid>
 </Window>

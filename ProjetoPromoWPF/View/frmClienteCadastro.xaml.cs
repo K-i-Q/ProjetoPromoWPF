@@ -52,20 +52,20 @@ namespace ProjetoPromoWPF.View
                                 {
                                     cliente.Senha = txtSenha.Text;
                                     //TODO
-                                    //if (Validacoes.ValidaTelefone(txtTelefone.Text))
-                                    //{
-                                    //    cliente.Telefone = txtTelefone.Text;
+                                    if (Validacoes.ValidaTelefone(txtTelefone.Text))
+                                    {
+                                        cliente.Telefone = txtTelefone.Text;
 
-                                    //    ClienteDAO.RegisterClient(cliente);
-                                    //    MessageBox.Show(cliente.Nome + " cadastrado com sucesso!");
-                                    //    home = new HomeCliente(cliente);
-                                    //    home.Show();
-                                    //    this.Close();
-                                    //}
-                                    //else
-                                    //{
-                                    //    MessageBox.Show("Telefone invalida!");
-                                    //}
+                                        ClienteDAO.RegisterClient(cliente);
+                                        MessageBox.Show(cliente.Nome + " cadastrado com sucesso!");
+                                        home = new HomeCliente(cliente);
+                                        home.Show();
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Telefone invalida!");
+                                    }
                                 }
                                 else
                                 {

@@ -18,6 +18,12 @@ namespace ProjetoPromoWPF.DAL
             ctx.SaveChanges();
         }
 
+        public static void ExcluirContratacao(EmpresaCliente ec)
+        {
+            ctx.EmpresaCliente.Remove(ec);
+            ctx.SaveChanges();
+        }
+
         public static List<EmpresaCliente> ShowAllCompanyClient() => ctx.EmpresaCliente.ToList();
 
         public static EmpresaCliente ShowHiring(EmpresaCliente ec)
@@ -63,5 +69,9 @@ namespace ProjetoPromoWPF.DAL
         public static List<EmpresaCliente> ClientesDaEmpresa(Empresa e) => ctx.EmpresaCliente.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
 
         public static List<EmpresaCliente> EmpresasDoCliente(Cliente c) => ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(c.ClienteId)).ToList();
+
+        public static EmpresaCliente ContratacaoDoPlanoPeloClienteDaEmpresa(Empresa e, Cliente c, Plano p) => ctx.EmpresaCliente.FirstOrDefault(x => x.PlanoId.Equals(p.PlanoId) 
+                                                                                                                            && x.EmpresaId.Equals(e.EmpresaId)
+                                                                                                                            && x.ClienteId.Equals(c.ClienteId));
     }
 }

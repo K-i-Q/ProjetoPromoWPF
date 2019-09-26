@@ -30,8 +30,8 @@ namespace ProjetoPromoWPF.View
         public pgDetalhesEmpresaContratada(Empresa e, Cliente c)
         {
             InitializeComponent();
-            empresa = e;
-            cliente = c;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
             empresaCliente = EmpresaClienteDAO.ShowAllCompanyClient().FirstOrDefault(x => x.EmpresaId.Equals(empresa.EmpresaId) && x.ClienteId.Equals(cliente.ClienteId));
             plano = EmpresaClienteDAO.ShowPlanByCompanyPlanId(empresaCliente.PlanoId);
             carregarEmpresaContratada(e);
@@ -44,6 +44,20 @@ namespace ProjetoPromoWPF.View
             txtEmail.Text = e.Email;
             txtTelefone.Text = e.Telefone;
             txtPlano.Text = plano.Nome;
+        }
+
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Deseja excluir a contratação do plano " + plano.Nome + "?", "Excluir contratação", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                EmpresaClienteDAO.ExcluirContratacao(EmpresaClienteDAO.ContratacaoDoPlanoPeloClienteDaEmpresa(empresa, cliente, plano));
+
+                MessageBox.Show("Plano " + plano.Nome + " da empresa " + empresa.Razao + " excluido com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada!");
+            }
         }
     }
 }

@@ -120,9 +120,6 @@
     <Compile Include="View\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\pgAlteraBeneficio.xaml.cs">
-      <DependentUpon>pgAlteraBeneficio.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\pgAlterarParceria.xaml.cs">
       <DependentUpon>pgAlterarParceria.xaml</DependentUpon>
     </Compile>
@@ -263,10 +260,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Index.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgAlteraBeneficio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

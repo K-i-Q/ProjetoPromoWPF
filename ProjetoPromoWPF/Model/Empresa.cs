@@ -22,7 +22,6 @@ namespace ProjetoPromoWPF.Model
 
         public List<EmpresaCliente> EmpresaCliente { get; set; }
         public List<Plano> Planos { get; set; }
-        public List<Empresa> Empresas { get; set; }
         public List<Beneficio> Beneficios { get; set; }
 
 

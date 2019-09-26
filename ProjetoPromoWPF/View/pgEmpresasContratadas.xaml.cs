@@ -35,15 +35,7 @@ namespace ProjetoPromoWPF.View
         {
             List<EmpresaEmpresa> parcerias = new List<EmpresaEmpresa>();
             List<Empresa> parceiros = new List<Empresa>();
-            try
-            {
-                parcerias = ctx.Parceiros.Where(x => x.EmpresaUm.Beneficios.Equals(empresa)).ToList();
-            }
-            catch (Exception erro)
-            {
-
-                MessageBox.Show(erro.ToString());
-            }
+            parcerias = ctx.Parceiros.Where(x => x.EmpresaUm.EmpresaId.Equals(empresa.EmpresaId)).ToList();
 
             foreach (EmpresaEmpresa parceria in parcerias)
             {

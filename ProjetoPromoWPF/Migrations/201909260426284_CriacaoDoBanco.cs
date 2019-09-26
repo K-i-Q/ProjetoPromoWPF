@@ -43,11 +43,8 @@ namespace ProjetoPromoWPF.Migrations
                         Senha = c.String(),
                         Telefone = c.String(),
                         CriadoEm = c.DateTime(nullable: false),
-                        Empresa_EmpresaId = c.Int(),
                     })
-                .PrimaryKey(t => t.EmpresaId)
-                .ForeignKey("dbo.Empresas", t => t.Empresa_EmpresaId)
-                .Index(t => t.Empresa_EmpresaId);
+                .PrimaryKey(t => t.EmpresaId);
             
             CreateTable(
                 "dbo.ClientesDaEmpresa",
@@ -120,7 +117,6 @@ namespace ProjetoPromoWPF.Migrations
         {
             DropForeignKey("dbo.ParceiroDaEmpresa", "EmpresaUm_EmpresaId", "dbo.Empresas");
             DropForeignKey("dbo.ParceiroDaEmpresa", "EmpresaDois_EmpresaId", "dbo.Empresas");
-            DropForeignKey("dbo.Empresas", "Empresa_EmpresaId", "dbo.Empresas");
             DropForeignKey("dbo.ClientesDaEmpresa", "PlanoId", "dbo.Planos");
             DropForeignKey("dbo.Planos", "Empresa_EmpresaId", "dbo.Empresas");
             DropForeignKey("dbo.ClientesDaEmpresa", "EmpresaId", "dbo.Empresas");
@@ -132,7 +128,6 @@ namespace ProjetoPromoWPF.Migrations
             DropIndex("dbo.ClientesDaEmpresa", new[] { "PlanoId" });
             DropIndex("dbo.ClientesDaEmpresa", new[] { "EmpresaId" });
             DropIndex("dbo.ClientesDaEmpresa", new[] { "ClienteId" });
-            DropIndex("dbo.Empresas", new[] { "Empresa_EmpresaId" });
             DropIndex("dbo.Beneficios", new[] { "Empresa_EmpresaId" });
             DropTable("dbo.ParceiroDaEmpresa");
             DropTable("dbo.Planos");

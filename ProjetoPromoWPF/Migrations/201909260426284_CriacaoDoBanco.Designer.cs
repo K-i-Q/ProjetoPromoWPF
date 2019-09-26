@@ -13,7 +13,7 @@ namespace ProjetoPromoWPF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201909251843155_CriacaoDoBanco"; }
+            get { return "201909260426284_CriacaoDoBanco"; }
         }
         
         string IMigrationMetadata.Source

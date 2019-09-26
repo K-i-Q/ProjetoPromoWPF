@@ -32,8 +32,8 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
             listarDetalhesDaEmpresa(e);
-            empresa = e;
-            cliente = c;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
         }
         private void listarDetalhesDaEmpresa(Empresa e)
         {

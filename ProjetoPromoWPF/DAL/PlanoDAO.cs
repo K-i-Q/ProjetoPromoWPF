@@ -31,6 +31,7 @@ namespace ProjetoPromoWPF.DAL
         {
             return ctx.Planos.FirstOrDefault(x => x.PlanoId.Equals(plano.PlanoId));
         }
+
         public static Plano FindPlanById(int id)
         {
             //return ctx.Planos.FirstOrDefault(x => x.PlanoId.Equals(plano));
@@ -42,6 +43,8 @@ namespace ProjetoPromoWPF.DAL
             ctx.Entry(plano).State = EntityState.Modified;
             ctx.SaveChanges();
         }
+
+       // public static List<Plano> PlanosDaEmpresa(Empresa e) => ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
 
     }
 }

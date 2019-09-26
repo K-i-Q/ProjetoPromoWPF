@@ -29,7 +29,7 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresaUm = e;
+            empresaUm = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
 
         private void BtnCadastrarParceria_Click(object sender, RoutedEventArgs e)

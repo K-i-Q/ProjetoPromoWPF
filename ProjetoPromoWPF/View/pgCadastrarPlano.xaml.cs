@@ -28,7 +28,7 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
 
         private void BtnCadastrarPlano_Click(object sender, RoutedEventArgs e)

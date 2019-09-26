@@ -49,6 +49,9 @@ namespace ProjetoPromoWPF.View
 
         private void BtnDetalhesContratada_Click(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
+            empresa = button.DataContext as Empresa;
+
             fmDetalhesDoBeneficio.Content = new pgEmpresasContratadas(empresa);
         }
         

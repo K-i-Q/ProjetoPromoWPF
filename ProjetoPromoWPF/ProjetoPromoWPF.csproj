@@ -219,6 +219,9 @@
     <Compile Include="View\pgVerPerfil.xaml.cs">
       <DependentUpon>pgVerPerfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\uclAlterarBeneficio.xaml.cs">
+      <DependentUpon>uclAlterarBeneficio.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\frmCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -392,6 +395,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgVerPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\uclAlterarBeneficio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

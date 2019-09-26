@@ -39,11 +39,6 @@ namespace ProjetoPromoWPF.View
             fmBeneficio.Content = new pgListaBeneficio(empresa);
         }
 
-        private void BtnAlterar_Click(object sender, RoutedEventArgs e)
-        {
-            fmBeneficio.Content = new pgAlteraBeneficio();
-        }
-
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
         {
             fmBeneficio.Content = new pgExcluiBeneficio();

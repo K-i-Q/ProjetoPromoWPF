@@ -29,6 +29,12 @@
                             <TextBlock Text="Descrição: " />
                             <TextBlock Text="{Binding Descricao}" />
                         </WrapPanel>
+                        <WrapPanel>
+                            <Button Content="Editar" 
+                                    x:Name="btnEditar"
+                                    Click="BtnEditar_Click"
+                                    />
+                        </WrapPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

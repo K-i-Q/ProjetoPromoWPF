@@ -23,6 +23,7 @@ namespace ProjetoPromoWPF.View
     public partial class pgListaBeneficio : Page
     {
         Empresa empresa;
+        Beneficio beneficio;
         public pgListaBeneficio(Empresa e)
         {
             InitializeComponent();
@@ -33,6 +34,15 @@ namespace ProjetoPromoWPF.View
         private void listarBeneficios(Empresa empresa)
         {
             listaBeneficios.ItemsSource = BeneficioDAO.BeneficiosDaEmpresa(empresa);
+        }
+
+        private void BtnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            beneficio = button.DataContext as Beneficio;
+
+            this.Content = new uclAlterarBeneficio(beneficio);
+
         }
     }
 }

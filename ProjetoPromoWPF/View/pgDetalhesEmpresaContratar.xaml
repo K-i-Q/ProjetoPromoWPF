@@ -83,6 +83,10 @@
                                 <TextBlock x:Name="txtDescricaoPlano" Text="{Binding Descricao}" />
                             </WrapPanel>
                             <WrapPanel>
+                                <TextBlock Text="Nível: " />
+                                <TextBlock x:Name="txtNivel" Text="{Binding Nivel}" />
+                            </WrapPanel>
+                            <WrapPanel>
                                 <Button x:Name="btnAssinar" Content="Assinar"
                                     Click="BtnAssinar_Click"
                                     />

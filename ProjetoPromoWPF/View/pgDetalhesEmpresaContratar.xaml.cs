@@ -58,6 +58,7 @@ namespace ProjetoPromoWPF.View
                 empresaCliente.Empresa = empresa;
                 empresaCliente.PlanoId = plano.PlanoId;
                 empresaCliente.Plano = plano;
+                empresaCliente.Nivel = plano.Nivel;
 
                 EmpresaClienteDAO.HireCompany(empresaCliente);
 

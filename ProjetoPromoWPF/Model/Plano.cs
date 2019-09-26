@@ -17,6 +17,7 @@ namespace ProjetoPromoWPF.Model
         public double Preco { get; set; }
         public string Descricao { get; set; }
         public Empresa Empresa { get; set; }
+        public int Nivel { get; set; }
 
         public override string ToString()
         {

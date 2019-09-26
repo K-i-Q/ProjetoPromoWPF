@@ -38,9 +38,9 @@ namespace ProjetoPromoWPF.View
 
             contratacoes = EmpresaClienteDAO.EmpresasDoCliente(cliente);
 
-            foreach (EmpresaCliente contratada in contratacoes)
+            foreach (EmpresaCliente contratacao in contratacoes)
             {
-                empresas.Add(EmpresaDAO.FindCompanyById(contratada.EmpresaId));
+                empresas.Add(EmpresaDAO.FindCompanyById(contratacao.EmpresaId));
             }
 
             listaDeContratadas.ItemsSource = empresas;
@@ -51,7 +51,7 @@ namespace ProjetoPromoWPF.View
             Button button = sender as Button;
             empresa = button.DataContext as Empresa;
 
-            fmDetalhesDoBeneficio.Content = new pgEmpresasContratadas(empresa);
+            fmDetalhesDoBeneficio.Content = new pgEmpresasContratadas(empresa,cliente);
         }
         
     }

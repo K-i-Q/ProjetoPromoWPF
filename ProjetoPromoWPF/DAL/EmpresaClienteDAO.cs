@@ -70,8 +70,9 @@ namespace ProjetoPromoWPF.DAL
 
         public static List<EmpresaCliente> EmpresasDoCliente(Cliente c) => ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(c.ClienteId)).ToList();
 
-        public static EmpresaCliente ContratacaoDoPlanoPeloClienteDaEmpresa(Empresa e, Cliente c, Plano p) => ctx.EmpresaCliente.FirstOrDefault(x => x.PlanoId.Equals(p.PlanoId) 
-                                                                                                                            && x.EmpresaId.Equals(e.EmpresaId)
-                                                                                                                            && x.ClienteId.Equals(c.ClienteId));
+        public static EmpresaCliente ContratacaoDoPlanoPeloClienteDaEmpresa(Empresa e, Cliente c, Plano p) => ctx.EmpresaCliente.FirstOrDefault(x => x.PlanoId.Equals(p.PlanoId) && x.EmpresaId.Equals(e.EmpresaId) && x.ClienteId.Equals(c.ClienteId));
+
+        public static EmpresaCliente ContratacaoDoClienteDaEmpresa(Empresa e, Cliente c) => ctx.EmpresaCliente.FirstOrDefault(x => x.EmpresaId.Equals(e.EmpresaId) && x.ClienteId.Equals(c.ClienteId));
     }
+
 }

@@ -19,6 +19,7 @@ namespace ProjetoPromoWPF.Model
         public Empresa Empresa { get; set; }
         public int PlanoId { get; set; }
         public Plano Plano { get; set; }
+        public int Nivel { get; set; }
         public DateTime ContratadaEm { get; set; }
 
         public EmpresaCliente()

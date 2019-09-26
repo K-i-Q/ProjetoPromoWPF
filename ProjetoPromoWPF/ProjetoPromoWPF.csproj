@@ -78,6 +78,14 @@
     <Compile Include="Migrations\201909260426284_CriacaoDoBanco.Designer.cs">
       <DependentUpon>201909260426284_CriacaoDoBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909261600390_AdicionadoPropriedadeNivelNaClassePlano.cs" />
+    <Compile Include="Migrations\201909261600390_AdicionadoPropriedadeNivelNaClassePlano.Designer.cs">
+      <DependentUpon>201909261600390_AdicionadoPropriedadeNivelNaClassePlano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.cs" />
+    <Compile Include="Migrations\201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.Designer.cs">
+      <DependentUpon>201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Beneficio.cs" />
@@ -412,6 +420,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201909260426284_CriacaoDoBanco.resx">
       <DependentUpon>201909260426284_CriacaoDoBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909261600390_AdicionadoPropriedadeNivelNaClassePlano.resx">
+      <DependentUpon>201909261600390_AdicionadoPropriedadeNivelNaClassePlano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.resx">
+      <DependentUpon>201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

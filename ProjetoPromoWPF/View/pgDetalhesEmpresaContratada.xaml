@@ -45,6 +45,13 @@
                                 Text="{Binding Plano}"
                                />
                 </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Text="Nivel Plano: "
+                               />
+                    <TextBlock x:Name="txtNivel"
+                                Text="{Binding Nivel}"
+                               />
+                </WrapPanel>
             </StackPanel>
             <StackPanel>
                 <WrapPanel>

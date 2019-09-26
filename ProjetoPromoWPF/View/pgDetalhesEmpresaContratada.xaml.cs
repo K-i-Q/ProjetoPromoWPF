@@ -44,6 +44,7 @@ namespace ProjetoPromoWPF.View
             txtEmail.Text = e.Email;
             txtTelefone.Text = e.Telefone;
             txtPlano.Text = plano.Nome;
+            txtNivel.Text = plano.Nivel.ToString();
         }
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)

@@ -39,6 +39,7 @@ namespace ProjetoPromoWPF.View
             plano.Preco = Convert.ToDouble(txtPreco.Text);
             plano.Descricao = txtDescricao.Text;
             plano.Empresa = empresa;
+            plano.Nivel = Convert.ToInt32(txtNivel.Text);
 
             PlanoDAO.RegisterPlan(plano);
             MessageBox.Show("Plano: "+plano.Nome+" cadastrado para empresa " +plano.Empresa.Razao);

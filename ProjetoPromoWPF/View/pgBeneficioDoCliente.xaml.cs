@@ -24,7 +24,6 @@ namespace ProjetoPromoWPF.View
     {
         Cliente cliente;
         Empresa empresa;
-        Context ctx = SingletonContext.GetInstance();
         public pgBeneficioDoCliente(Cliente c)
         {
             InitializeComponent();
@@ -37,7 +36,7 @@ namespace ProjetoPromoWPF.View
             List<EmpresaCliente> contratacoes = new List<EmpresaCliente>();
             List<Empresa> empresas = new List<Empresa>();
 
-            contratacoes = ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(cliente.ClienteId)).ToList();
+            contratacoes = EmpresaClienteDAO.EmpresasDoCliente(cliente);
 
             foreach (EmpresaCliente contratada in contratacoes)
             {

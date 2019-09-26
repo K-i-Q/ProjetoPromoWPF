@@ -24,7 +24,6 @@ namespace ProjetoPromoWPF.View
     {
         Cliente cliente;
         Empresa empresa;
-        Context ctx = SingletonContext.GetInstance();
 
         public pgListarEmpresasContratadas(Cliente c)
         {

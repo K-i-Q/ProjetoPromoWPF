@@ -22,7 +22,6 @@ namespace ProjetoPromoWPF.View
     public partial class HomeCliente : Window
     {
         Cliente cliente;
-        private static Context ctx = SingletonContext.GetInstance();
 
         public HomeCliente(Cliente c)
         {

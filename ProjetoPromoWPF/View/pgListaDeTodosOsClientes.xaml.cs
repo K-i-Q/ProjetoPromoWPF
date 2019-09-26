@@ -29,10 +29,7 @@ namespace ProjetoPromoWPF.View
         }
         private void listarTodosOsClientes()
         {
-            Context ctx = SingletonContext.GetInstance();
-
-            listaDeTodosOsClientes.ItemsSource = ctx.Clientes.ToList();
-
+            listaDeTodosOsClientes.ItemsSource = ClienteDAO.ShowClients();
         }
     }
 }

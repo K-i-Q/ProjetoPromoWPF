@@ -29,13 +29,14 @@ namespace ProjetoPromoWPF.DAL
         public static EmpresaEmpresa FindPartnership(EmpresaEmpresa parceria)
         {
             return ctx.Parceiros.FirstOrDefault(x => x.EmpresaEmpresaId.Equals(parceria.EmpresaEmpresaId));
-        }
-        
+        }   
 
         public static void EditPartner(EmpresaEmpresa parceria)
         {
             ctx.Entry(parceria).State = EntityState.Modified;
             ctx.SaveChanges();
         }
+
+        public static List<EmpresaEmpresa> ParceirosDaEmpresa(Empresa e) => ctx.Parceiros.Where(x => x.EmpresaUm.EmpresaId.Equals(e.EmpresaId)).ToList();
     }
 }

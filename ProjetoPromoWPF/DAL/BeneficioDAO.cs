@@ -36,5 +36,7 @@ namespace ProjetoPromoWPF.DAL
             ctx.Entry(beneficio).State = EntityState.Modified;
             ctx.SaveChanges();
         }
+
+        public static List<Beneficio> BeneficiosDaEmpresa(Empresa e) => ctx.Beneficios.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
     }
 }

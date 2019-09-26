@@ -21,8 +21,6 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class HomeAdm : Window
     {
-        private static Context ctx = SingletonContext.GetInstance();
-
         public HomeAdm()
         {
             InitializeComponent();

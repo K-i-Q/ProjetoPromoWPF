@@ -29,10 +29,7 @@ namespace ProjetoPromoWPF.View
         }
         private void listarTodasAsEmpresas()
         {
-            Context ctx = SingletonContext.GetInstance();
-
-            listaDeTodasAsEmpresas.ItemsSource = ctx.Empresas.ToList();
-
+            listaDeTodasAsEmpresas.ItemsSource = EmpresaDAO.ShowCompanies();
         }
     }
 }

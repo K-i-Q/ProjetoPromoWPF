@@ -32,10 +32,8 @@ namespace ProjetoPromoWPF.View
 
         private void listarParceiros(Empresa empresa)
         {
-            Context ctx = SingletonContext.GetInstance();
-
             List<Empresa> listaParceiros = new List<Empresa>();
-            List<EmpresaEmpresa> listaParcerias = ctx.Parceiros.Where(x => x.EmpresaUm.EmpresaId.Equals(empresa.EmpresaId)).ToList();
+            List<EmpresaEmpresa> listaParcerias = EmpresaEmpresaDAO.ParceirosDaEmpresa(empresa);
 
 
             foreach (EmpresaEmpresa parceria in listaParcerias)

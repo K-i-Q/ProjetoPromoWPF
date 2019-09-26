@@ -22,7 +22,6 @@ namespace ProjetoPromoWPF.View
     public partial class HomeEmpresa : Window
     {
         Empresa empresa;
-        private static Context ctx = SingletonContext.GetInstance();
 
         public HomeEmpresa(Empresa e)
         {

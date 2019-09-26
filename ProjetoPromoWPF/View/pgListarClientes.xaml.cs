@@ -34,8 +34,7 @@ namespace ProjetoPromoWPF.View
 
         private void listaDeClientesDaEmpresa(Empresa empresa)
         {
-            Context ctx = SingletonContext.GetInstance();
-            List<EmpresaCliente> listaDeContratacoes = ctx.EmpresaCliente.Where(x => x.Empresa.EmpresaId.Equals(empresa.EmpresaId)).ToList();
+            List<EmpresaCliente> listaDeContratacoes = EmpresaClienteDAO.ClientesDaEmpresa(empresa);
             List<Cliente> listaDeClientesDaEmpresa = new List<Cliente>();
 
             foreach (EmpresaCliente contratacao in listaDeContratacoes)

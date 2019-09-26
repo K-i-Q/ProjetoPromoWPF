@@ -23,7 +23,6 @@ namespace ProjetoPromoWPF.View
     public partial class pgEmpresasContratadas : Page
     {
         Empresa empresa;
-        Context ctx = SingletonContext.GetInstance();
         public pgEmpresasContratadas(Empresa e)
         {
             InitializeComponent();
@@ -35,7 +34,7 @@ namespace ProjetoPromoWPF.View
         {
             List<EmpresaEmpresa> parcerias = new List<EmpresaEmpresa>();
             List<Empresa> parceiros = new List<Empresa>();
-            parcerias = ctx.Parceiros.Where(x => x.EmpresaUm.EmpresaId.Equals(empresa.EmpresaId)).ToList();
+            parcerias = EmpresaEmpresaDAO.ParceirosDaEmpresa(empresa);
 
             foreach (EmpresaEmpresa parceria in parcerias)
             {

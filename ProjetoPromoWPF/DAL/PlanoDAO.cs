@@ -44,7 +44,7 @@ namespace ProjetoPromoWPF.DAL
             ctx.SaveChanges();
         }
 
-       // public static List<Plano> PlanosDaEmpresa(Empresa e) => ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
+       public static List<Plano> PlanosDaEmpresa(Empresa e) => ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
 
     }
 }

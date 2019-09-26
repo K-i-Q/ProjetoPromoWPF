@@ -32,8 +32,7 @@ namespace ProjetoPromoWPF.View
 
         private void listarBeneficios(Empresa empresa)
         {
-            Context ctx = SingletonContext.GetInstance();
-            listaBeneficios.ItemsSource = ctx.Beneficios.Where(x => x.Empresa.EmpresaId.Equals(empresa.EmpresaId)).ToList();
+            listaBeneficios.ItemsSource = BeneficioDAO.BeneficiosDaEmpresa(empresa);
         }
     }
 }

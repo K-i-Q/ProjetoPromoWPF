@@ -24,7 +24,6 @@ namespace ProjetoPromoWPF.View
     {
         Cliente cliente;
         Empresa empresa;
-        Context ctx = SingletonContext.GetInstance();
 
         public pgContratarEmpresa(Cliente c)
         {
@@ -34,7 +33,7 @@ namespace ProjetoPromoWPF.View
         }
         private void listarEmpresasParaContratar()
         {
-            listaDeEmpresasParaContratar.ItemsSource = ctx.Empresas.ToList();            
+            listaDeEmpresasParaContratar.ItemsSource = EmpresaDAO.ShowCompanies();
         }
         private void BtnDetalhesContratar_Click(object sender, RoutedEventArgs e)
         {

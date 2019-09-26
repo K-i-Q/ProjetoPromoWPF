@@ -22,7 +22,6 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgDetalhesEmpresaContratar : Page
     {
-        Context ctx = SingletonContext.GetInstance();
         Empresa empresa;
         Cliente cliente;
         Plano plano;
@@ -41,7 +40,7 @@ namespace ProjetoPromoWPF.View
             txtEmail.Text = e.Email;
             txtRazao.Text = e.Razao;
             txtTelefone.Text = e.Telefone;
-            listaDePlanos.ItemsSource = ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
+            listaDePlanos.ItemsSource = PlanoDAO.PlanosDaEmpresa(e);
         }
 
         private void BtnAssinar_Click(object sender, RoutedEventArgs e)

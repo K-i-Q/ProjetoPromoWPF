@@ -59,5 +59,9 @@ namespace ProjetoPromoWPF.DAL
             }
             return null;
         }
+
+        public static List<EmpresaCliente> ClientesDaEmpresa(Empresa e) => ctx.EmpresaCliente.Where(x => x.Empresa.EmpresaId.Equals(e.EmpresaId)).ToList();
+
+        public static List<EmpresaCliente> EmpresasDoCliente(Cliente c) => ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(c.ClienteId)).ToList();
     }
 }

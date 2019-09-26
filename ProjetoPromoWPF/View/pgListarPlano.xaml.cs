@@ -32,8 +32,7 @@ namespace ProjetoPromoWPF.View
 
         private void listarPlanos(Empresa empresa)
         {
-            Context ctx = SingletonContext.GetInstance();
-            listaPlanos.ItemsSource = ctx.Planos.Where(x => x.Empresa.EmpresaId.Equals(empresa.EmpresaId)).ToList();
+            listaPlanos.ItemsSource = PlanoDAO.PlanosDaEmpresa(empresa);
         }
     }
 }

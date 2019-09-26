@@ -29,7 +29,7 @@ namespace ProjetoPromoWPF.View
         private void BtnCadastrarEmpresa_Click(object sender, RoutedEventArgs e)
         {
             Empresa empresa = new Empresa();
-            Index home = new Index();
+            HomeEmpresa home;
 
             empresa.CNPJ = txtCNPJ.Text;
             empresa.Razao = txtRazao.Text;
@@ -40,6 +40,7 @@ namespace ProjetoPromoWPF.View
             EmpresaDAO.RegisterCompany(empresa);
             MessageBox.Show(empresa.Razao + " cadastrada com sucesso!");
 
+            home = new HomeEmpresa(empresa);
             home.Show();
             this.Close();
         }

@@ -95,6 +95,7 @@
     <Compile Include="Model\EmpresaCliente.cs" />
     <Compile Include="Model\EmpresaEmpresa.cs" />
     <Compile Include="Model\Plano.cs" />
+    <Compile Include="Util\Validacoes.cs" />
     <Compile Include="View\frmCadastro.xaml.cs">
       <DependentUpon>frmCadastro.xaml</DependentUpon>
     </Compile>

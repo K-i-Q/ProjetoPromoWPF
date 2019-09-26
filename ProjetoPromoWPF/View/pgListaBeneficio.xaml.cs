@@ -27,7 +27,7 @@ namespace ProjetoPromoWPF.View
         public pgListaBeneficio(Empresa e)
         {
             InitializeComponent();
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
             listarBeneficios(empresa);
         }
 

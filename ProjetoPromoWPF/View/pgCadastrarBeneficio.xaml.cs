@@ -28,7 +28,7 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
 
         }
 

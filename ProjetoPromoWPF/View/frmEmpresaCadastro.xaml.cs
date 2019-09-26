@@ -1,5 +1,6 @@
 ﻿using ProjetoPromoWPF.DAL;
 using ProjetoPromoWPF.Model;
+using ProjetoPromoWPF.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,18 +32,60 @@ namespace ProjetoPromoWPF.View
             Empresa empresa = new Empresa();
             HomeEmpresa home;
 
-            empresa.CNPJ = txtCNPJ.Text;
-            empresa.Razao = txtRazao.Text;
-            empresa.Email = txtEmail.Text;
-            empresa.Telefone = txtTelefone.Text;
-            empresa.Senha = txtSenha.Text;
+            if (Validacoes.ValidaCNPJ(txtCNPJ.Text))
+            {
+                empresa.CNPJ = txtCNPJ.Text;
 
-            EmpresaDAO.RegisterCompany(empresa);
-            MessageBox.Show(empresa.Razao + " cadastrada com sucesso!");
+                if (Validacoes.ValidaNome(txtRazao.Text))
+                {
+                    empresa.Razao = txtRazao.Text;
 
-            home = new HomeEmpresa(empresa);
-            home.Show();
-            this.Close();
+                    if (Validacoes.ValidaEmail(txtEmail.Text))
+                    {
+                        empresa.Email = txtEmail.Text;
+
+                        if (Validacoes.ValidaTelefone(txtTelefone.Text))
+                        {
+                            empresa.Telefone = txtTelefone.Text;
+
+                            if (Validacoes.ValidaSenha(txtSenha.Text))
+                            {
+                                empresa.Senha = txtSenha.Text;
+
+                                EmpresaDAO.RegisterCompany(empresa);
+                                MessageBox.Show(empresa.Razao + " cadastrada com sucesso!");
+
+                                home = new HomeEmpresa(empresa);
+                                home.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Senha inválida!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Telefone inválido!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email inválido!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Nome inválido!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("CNPJ inválido!");
+            }
+
+
+            
         }
     }
 }

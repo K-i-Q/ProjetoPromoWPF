@@ -28,7 +28,7 @@ namespace ProjetoPromoWPF.View
         public pgContratarEmpresa(Cliente c)
         {
             InitializeComponent();
-            cliente = c;
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
             listarEmpresasParaContratar();
         }
         private void listarEmpresasParaContratar()

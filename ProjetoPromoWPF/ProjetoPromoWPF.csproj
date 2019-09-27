@@ -192,6 +192,9 @@
     <Compile Include="View\pgListaBeneficio.xaml.cs">
       <DependentUpon>pgListaBeneficio.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\pgListaDeClientesParaEmpresaExcluir.xaml.cs">
+      <DependentUpon>pgListaDeClientesParaEmpresaExcluir.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\pgListaDeTodasAsEmpresas.xaml.cs">
       <DependentUpon>pgListaDeTodasAsEmpresas.xaml</DependentUpon>
     </Compile>
@@ -356,6 +359,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgListaBeneficio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\pgListaDeClientesParaEmpresaExcluir.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

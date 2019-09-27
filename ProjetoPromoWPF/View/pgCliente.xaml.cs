@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace ProjetoPromoWPF.View
         public pgCliente(Empresa e)
         {
             InitializeComponent();
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
 
         private void BtnListar_Click(object sender, RoutedEventArgs e)
@@ -35,7 +36,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
         {
-            fmCliente.Content = new pgExcluirClientes();
+            fmCliente.Content = new pgListaDeClientesParaEmpresaExcluir(empresa);
         }
     }
 }

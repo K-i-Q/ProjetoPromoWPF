@@ -1,6 +1,7 @@
 ﻿using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,16 @@ namespace ProjetoPromoWPF.DAL
     class EmpresaClienteDAO
     {
         private static Context ctx = SingletonContext.GetInstance();
-
-        //Cadastra a contratação de uma empresa para um cliente
+        
         public static void HireCompany(EmpresaCliente empresaCliente)
         {
             ctx.EmpresaCliente.Add(empresaCliente);
+            ctx.SaveChanges();
+        }
+
+        public static void EditarContratacao(EmpresaCliente empresaCliente)
+        {
+            ctx.Entry(empresaCliente).State = EntityState.Modified;
             ctx.SaveChanges();
         }
 
@@ -37,8 +43,7 @@ namespace ProjetoPromoWPF.DAL
             }
             return null;
         }
-
-        //show companies hire by client
+        
         public static List<Empresa> ShowContractorsByClient(Cliente c)
         {
             List<Empresa> empresasContratadas = new List<Empresa>();

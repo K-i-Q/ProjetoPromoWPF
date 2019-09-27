@@ -60,5 +60,10 @@ namespace ProjetoPromoWPF.View
                 MessageBox.Show("Operação cancelada!");
             }
         }
+
+        private void BtnEditarContratacao_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = new uclAlterarContratacao(empresaCliente);
+        }
     }
 }

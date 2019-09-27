@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="ProjetoPromoWPF.View.uclAlterarContratacao"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetoPromoWPF.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <WrapPanel>
+            <TextBlock Text="Planos"
+                       FontSize="24"
+                           />
+        </WrapPanel>
+        <ListView x:Name="listaDePlanos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nome: " />
+                            <TextBlock x:Name="txtNomePlano" Text="{Binding Nome}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Preço: " />
+                            <TextBlock x:Name="txtPrecoPlano" Text="{Binding Preco}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Descrição: " />
+                            <TextBlock x:Name="txtDescricaoPlano" Text="{Binding Descricao}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nível: " />
+                            <TextBlock x:Name="txtNivel" Text="{Binding Nivel}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Button x:Name="btnAssinar" Content="Assinar"
+                                    Click="BtnAssinar_Click"
+                                    />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</UserControl>

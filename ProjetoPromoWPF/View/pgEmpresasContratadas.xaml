@@ -15,8 +15,20 @@
                 <DataTemplate>
                     <StackPanel>
                         <WrapPanel>
-                            <TextBlock Text="Razão: " />
-                            <TextBlock Text="{Binding Razao}" />
+                            <TextBlock Text="Detalhess da Empresa: " />
+                            <TextBlock Text="{Binding Empresa}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nome do benefício: " />
+                            <TextBlock Text="{Binding Nome}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Nível do benefício: " />
+                            <TextBlock Text="{Binding Nivel}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Descrição do benefício: " />
+                            <TextBlock Text="{Binding Descricao}" />
                         </WrapPanel>
                         <WrapPanel>
                             <Button Content="Acessar"

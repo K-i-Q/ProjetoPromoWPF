@@ -25,6 +25,11 @@ namespace ProjetoPromoWPF.View
         Empresa empresa;
         Cliente cliente;
         EmpresaCliente empresaCliente;
+
+        List<EmpresaEmpresa> parcerias;
+        List<Empresa> parceiros;
+        List<Beneficio> beneficiosDosParceiros;
+
         public pgEmpresasContratadas(Empresa e, Cliente c)
         {
             InitializeComponent();
@@ -36,8 +41,10 @@ namespace ProjetoPromoWPF.View
 
         private void carregarParceirosDaEmpresaContratadaPeloCliente(Empresa empresa)
         {
-            List<EmpresaEmpresa> parcerias = new List<EmpresaEmpresa>();
-            List<Empresa> parceiros = new List<Empresa>();
+            parcerias = new List<EmpresaEmpresa>();
+            parceiros = new List<Empresa>();
+            beneficiosDosParceiros = new List<Beneficio>();
+
             parcerias = EmpresaEmpresaDAO.ParceirosDaEmpresa(empresa);
 
             foreach (EmpresaEmpresa parceria in parcerias)
@@ -70,16 +77,26 @@ namespace ProjetoPromoWPF.View
                     default:
                         break;
                 }
-
-                
             }
 
-            listaDeParceiros.ItemsSource = parceiros;
+            foreach (Empresa empresaParceira in parceiros)
+            {
+                foreach (Beneficio beneficioDoParceiro in BeneficioDAO.BeneficiosDaEmpresa(empresaParceira))
+                {
+                    beneficiosDosParceiros.Add(beneficioDoParceiro);
+                }
+            }
+
+            listaDeParceiros.ItemsSource = beneficiosDosParceiros;
+            
         }
 
         private void BtnAcessarBeneficio_Click(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
+            Beneficio b = button.DataContext as Beneficio;
 
+            MessageBox.Show("Você acessou o benefício: " + b.Nome);
         }
     }
 }

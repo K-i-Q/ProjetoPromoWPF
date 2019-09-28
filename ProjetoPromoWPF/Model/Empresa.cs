@@ -24,12 +24,11 @@ namespace ProjetoPromoWPF.Model
         public List<Plano> Planos { get; set; }
         public List<Beneficio> Beneficios { get; set; }
 
-
+         
         public Empresa()
         {
             CriadoEm = DateTime.Now;
             EmpresaCliente = new List<EmpresaCliente>();
-
         }
 
 
@@ -37,23 +36,19 @@ namespace ProjetoPromoWPF.Model
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("________________________________________");
-            sb.Append("\n| ");
+            sb.Append("\n");
+            sb.Append("CNPJ: ");
+            sb.Append(CNPJ);
+            sb.Append("\n");
             sb.Append("Nome: ");
             sb.Append(Razao.ToUpper());
-            sb.Append("\n| ");
+            sb.Append("\n");
             sb.Append("Email: ");
             sb.Append(Email.ToUpper());
-            sb.Append("\n| ");
+            sb.Append("\n");
             sb.Append("Telefone: ");
             sb.Append(Telefone);
-            sb.Append("\n| ");
-            sb.Append("Planos: ");
-            sb.Append(Planos);
-            sb.Append("\n| ");
-            sb.Append("Cadastrado em: ");
-            sb.Append(CriadoEm);
-            sb.Append("\n| ");
+            sb.Append("\n");
             return sb.ToString();
         }
 

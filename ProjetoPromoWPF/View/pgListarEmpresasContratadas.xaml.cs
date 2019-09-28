@@ -28,15 +28,14 @@ namespace ProjetoPromoWPF.View
         public pgListarEmpresasContratadas(Cliente c)
         {
             InitializeComponent();
-            cliente = c;
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
             listarEmpresasContratadasPeloCliente();
         }
 
         private void listarEmpresasContratadasPeloCliente()
         {
             listaDeEmpresasContratadasPeloCliente.ItemsSource = EmpresaClienteDAO.ShowContractorsByClient(cliente);
-
-           //ctx.EmpresaCliente.Where(x => x.ClienteId.Equals(cliente.ClienteId)).ToList();
+            
         }
 
         private void BtnDetalhes_Click(object sender, RoutedEventArgs e)

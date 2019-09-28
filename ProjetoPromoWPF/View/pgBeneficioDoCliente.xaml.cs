@@ -27,7 +27,7 @@ namespace ProjetoPromoWPF.View
         public pgBeneficioDoCliente(Cliente c)
         {
             InitializeComponent();
-            cliente = c;
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
             carregarEmpresasContratadasPeloCliente(cliente);
         }
 

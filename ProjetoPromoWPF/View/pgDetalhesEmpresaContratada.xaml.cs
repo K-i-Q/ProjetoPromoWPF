@@ -34,7 +34,7 @@ namespace ProjetoPromoWPF.View
             cliente = ClienteDAO.FindClientById(c.ClienteId);
             empresaCliente = EmpresaClienteDAO.ShowAllCompanyClient().FirstOrDefault(x => x.EmpresaId.Equals(empresa.EmpresaId) && x.ClienteId.Equals(cliente.ClienteId));
             plano = EmpresaClienteDAO.ShowPlanByCompanyPlanId(empresaCliente.PlanoId);
-            carregarEmpresaContratada(e);
+            carregarEmpresaContratada(empresa);
         }
 
         private void carregarEmpresaContratada(Empresa e)

@@ -156,9 +156,6 @@
     <Compile Include="View\pgDetalhesCliente.xaml.cs">
       <DependentUpon>pgDetalhesCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\pgDetalhesDoBeneficioDoCliente.xaml.cs">
-      <DependentUpon>pgDetalhesDoBeneficioDoCliente.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\pgDetalhesEmpresaContratada.xaml.cs">
       <DependentUpon>pgDetalhesEmpresaContratada.xaml</DependentUpon>
     </Compile>
@@ -311,10 +308,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgDetalhesCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgDetalhesDoBeneficioDoCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

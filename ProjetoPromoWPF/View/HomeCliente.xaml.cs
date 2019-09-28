@@ -26,7 +26,7 @@ namespace ProjetoPromoWPF.View
         public HomeCliente(Cliente c)
         {
             InitializeComponent();
-            cliente = c;
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
         }
 
 

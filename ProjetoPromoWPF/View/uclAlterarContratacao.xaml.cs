@@ -46,12 +46,19 @@ namespace ProjetoPromoWPF.View
             Button button = sender as Button;
             Plano plano = button.DataContext as Plano;
 
+            if (MessageBox.Show("Desejar confirmar a alteração do contrato?", "Confirmar Alteração", MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                empresaCliente.PlanoId = plano.PlanoId;
+                empresaCliente.Plano = plano;
+                empresaCliente.Nivel = plano.Nivel;
 
-            empresaCliente.PlanoId = plano.PlanoId;
-            empresaCliente.Plano = plano;
-
-            EmpresaClienteDAO.EditarContratacao(empresaCliente);
-            MessageBox.Show("Contrato atualizado com sucesso. Novo plano: " + empresaCliente.Plano.Nome);
+                EmpresaClienteDAO.EditarContratacao(empresaCliente);
+                MessageBox.Show("Contrato atualizado com sucesso. Novo plano: " + empresaCliente.Plano.Nome);
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada!");
+            }
         }
     }
 }

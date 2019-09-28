@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,12 @@ namespace ProjetoPromoWPF.View
     public partial class pgMeuPerfil : Page
     {
         Cliente cliente;
+        frmLogin login;
         public pgMeuPerfil(Cliente c)
         {
             InitializeComponent();
-            cliente = c;
-            carregarInfoCliente(c);
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
+            carregarInfoCliente(cliente);
         }
 
         private void carregarInfoCliente(Cliente c)
@@ -47,6 +49,20 @@ namespace ProjetoPromoWPF.View
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Tem certeza de que você quer excluir sua conta? A exclusão não pode ser revertida", "Exclusão de Conta", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                login = new frmLogin();
+
+                ClienteDAO.RemoveClient(cliente);
+                MessageBox.Show("Sua conta foi excluída com sucesso!");
+
+                login.Show();
+                Window.GetWindow(this).Close();
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada!");
+            }
 
         }
     }

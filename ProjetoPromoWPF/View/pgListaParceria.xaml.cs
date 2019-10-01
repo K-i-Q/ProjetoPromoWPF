@@ -33,7 +33,7 @@ namespace ProjetoPromoWPF.View
         private void listarParceiros(Empresa empresa)
         {
             List<Empresa> listaParceiros = new List<Empresa>();
-            List<EmpresaEmpresa> listaParcerias = EmpresaEmpresaDAO.ParceirosDaEmpresa(empresa);
+            List<EmpresaEmpresa> listaParcerias = EmpresaEmpresaDAO.ParceriasDaEmpresa(empresa);
 
 
             foreach (EmpresaEmpresa parceria in listaParcerias)

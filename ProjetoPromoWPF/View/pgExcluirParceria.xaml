@@ -9,8 +9,27 @@
       Title="pgExcluirParceria">
 
     <Grid>
-        <TextBlock Text="Excluir Parceria"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <ListView x:Name="listaEmpresasParceiras">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="CNPJ: " />
+                            <TextBlock Text="{Binding CNPJ}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Razao: " />
+                            <TextBlock Text="{Binding Razao}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Button x:Name="btnExcluir"
+                                    Content="Excluir Parceria"
+                                    Click="BtnExcluir_Click"
+                                    />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

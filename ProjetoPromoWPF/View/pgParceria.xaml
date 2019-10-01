@@ -43,10 +43,6 @@
                     Margin="0,0,0,10"
                     x:Name="btnListarParceria" Click="BtnListarParceria_Click"
                     />
-            <Button Content="Alterar"
-                    Margin="0,0,0,10"
-                    x:Name="btnAlterarParceria" Click="BtnAlterarParceria_Click"
-                    />
             <Button Content="Excluir"
                     Margin="0,0,0,10"
                     x:Name="btnExcluirParceria" Click="BtnExcluirParceria_Click"

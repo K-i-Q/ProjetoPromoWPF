@@ -39,14 +39,9 @@ namespace ProjetoPromoWPF.View
             fmParceria.Content = new pgListaParceria(empresa);
         }
 
-        private void BtnAlterarParceria_Click(object sender, RoutedEventArgs e)
-        {
-            fmParceria.Content = new pgAlterarParceria();
-        }
-
         private void BtnExcluirParceria_Click(object sender, RoutedEventArgs e)
         {
-            fmParceria.Content = new pgExcluirParceria();
+            fmParceria.Content = new pgExcluirParceria(empresa);
         }
     }
 }

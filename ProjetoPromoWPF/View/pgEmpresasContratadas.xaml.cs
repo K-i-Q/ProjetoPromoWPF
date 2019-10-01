@@ -45,7 +45,7 @@ namespace ProjetoPromoWPF.View
             parceiros = new List<Empresa>();
             beneficiosDosParceiros = new List<Beneficio>();
 
-            parcerias = EmpresaEmpresaDAO.ParceirosDaEmpresa(empresa);
+            parcerias = EmpresaEmpresaDAO.ParceriasDaEmpresa(empresa);
 
             foreach (EmpresaEmpresa parceria in parcerias)
             {
@@ -57,7 +57,7 @@ namespace ProjetoPromoWPF.View
                     case 2:
                         parceiros.Add(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId));
                         
-                        foreach (EmpresaEmpresa parceriaDaParceria in EmpresaEmpresaDAO.ParceirosDaEmpresa(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId)))
+                        foreach (EmpresaEmpresa parceriaDaParceria in EmpresaEmpresaDAO.ParceriasDaEmpresa(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId)))
                         {
                             parceiros.Add(EmpresaDAO.FindCompanyById(parceriaDaParceria.EmpresaDoisId));
                         }
@@ -65,10 +65,10 @@ namespace ProjetoPromoWPF.View
                     case 3:
                         parceiros.Add(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId));
 
-                        foreach (EmpresaEmpresa parceriaDaParceria in EmpresaEmpresaDAO.ParceirosDaEmpresa(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId)))
+                        foreach (EmpresaEmpresa parceriaDaParceria in EmpresaEmpresaDAO.ParceriasDaEmpresa(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId)))
                         {
                             parceiros.Add(EmpresaDAO.FindCompanyById(parceriaDaParceria.EmpresaDoisId));
-                            foreach (EmpresaEmpresa parceriaDaParceriaDaParceria in EmpresaEmpresaDAO.ParceirosDaEmpresa(EmpresaDAO.FindCompanyById(parceriaDaParceria.EmpresaDoisId)))
+                            foreach (EmpresaEmpresa parceriaDaParceriaDaParceria in EmpresaEmpresaDAO.ParceriasDaEmpresa(EmpresaDAO.FindCompanyById(parceriaDaParceria.EmpresaDoisId)))
                             {
                                 parceiros.Add(EmpresaDAO.FindCompanyById(parceriaDaParceriaDaParceria.EmpresaDoisId));
                             }

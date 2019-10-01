@@ -26,10 +26,24 @@ namespace ProjetoPromoWPF.DAL
             ctx.SaveChanges();
         }
 
+        public static List<Empresa> ParceirosDaEmpresa(Empresa e)
+        {
+            List<Empresa> parceiros = new List<Empresa>();
+
+            foreach (EmpresaEmpresa parceria in ParceriasDaEmpresa(e))
+            {
+                parceiros.Add(EmpresaDAO.FindCompanyById(parceria.EmpresaDoisId));
+            }
+
+            return parceiros;
+        }
+
         public static EmpresaEmpresa FindPartnership(EmpresaEmpresa parceria)
         {
             return ctx.Parceiros.FirstOrDefault(x => x.EmpresaEmpresaId.Equals(parceria.EmpresaEmpresaId));
-        }   
+        }
+
+        public static EmpresaEmpresa ParceriaDasEmpresas(Empresa e, Empresa em) => ctx.Parceiros.FirstOrDefault(x => x.EmpresaUmId.Equals(e.EmpresaId)  && x.EmpresaDoisId.Equals(em.EmpresaId));
 
         public static void EditPartner(EmpresaEmpresa parceria)
         {
@@ -37,6 +51,6 @@ namespace ProjetoPromoWPF.DAL
             ctx.SaveChanges();
         }
 
-        public static List<EmpresaEmpresa> ParceirosDaEmpresa(Empresa e) => ctx.Parceiros.Where(x => x.EmpresaUm.EmpresaId.Equals(e.EmpresaId)).ToList();
+        public static List<EmpresaEmpresa> ParceriasDaEmpresa(Empresa e) => ctx.Parceiros.Where(x => x.EmpresaUm.EmpresaId.Equals(e.EmpresaId)).ToList();
     }
 }

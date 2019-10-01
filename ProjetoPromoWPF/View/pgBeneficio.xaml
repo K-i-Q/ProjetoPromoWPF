@@ -45,11 +45,6 @@
                     x:Name="btnListar" 
                     Click="BtnListar_Click"
                     />
-            <Button Content="Excluir"
-                    Margin="0,0,0,10"
-                    x:Name="btnExcluir" 
-                    Click="BtnExcluir_Click"
-                    />
         </StackPanel>
     </Grid>
 </Page>

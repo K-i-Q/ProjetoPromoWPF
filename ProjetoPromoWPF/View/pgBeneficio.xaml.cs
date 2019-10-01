@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
@@ -37,11 +38,6 @@ namespace ProjetoPromoWPF.View
         private void BtnListar_Click(object sender, RoutedEventArgs e)
         {
             fmBeneficio.Content = new pgListaBeneficio(empresa);
-        }
-
-        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-            fmBeneficio.Content = new pgExcluiBeneficio();
         }
     }
 }

@@ -44,5 +44,21 @@ namespace ProjetoPromoWPF.View
             this.Content = new uclAlterarBeneficio(beneficio);
 
         }
+
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            beneficio = button.DataContext as Beneficio;
+
+            if (MessageBox.Show("Tem certeza que deseja excluir o benefício "+beneficio.Nome+"?","Exclusão de Benefício", MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                BeneficioDAO.RemoveBenefit(beneficio);
+                MessageBox.Show("Benefício excluído com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Operação Cancelada!");
+            }
+        }
     }
 }

@@ -34,6 +34,10 @@
                                     x:Name="btnEditar"
                                     Click="BtnEditar_Click"
                                     />
+                            <Button Content="Excluir" 
+                                    x:Name="btnExcluir"
+                                    Click="BtnExcluir_Click"
+                                    />
                         </WrapPanel>
                     </StackPanel>
                 </DataTemplate>

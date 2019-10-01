@@ -46,6 +46,15 @@ namespace ProjetoPromoWPF.View
         {
             Button button = sender as Button;
             Plano plano = button.DataContext as Plano;
+            if (MessageBox.Show("Tem certeza que deseja excluir o plano "+plano.Nome+"?","Exclusão de Plano",MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                PlanoDAO.RemovePlan(plano);
+                MessageBox.Show("Plano excluído com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Operação Cancelada!");
+            }
         }
     }
 }

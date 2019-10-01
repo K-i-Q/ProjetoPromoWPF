@@ -40,9 +40,7 @@ namespace ProjetoPromoWPF.View
         {
             Button button = sender as Button;
             beneficio = button.DataContext as Beneficio;
-
             this.Content = new uclAlterarBeneficio(beneficio);
-
         }
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)

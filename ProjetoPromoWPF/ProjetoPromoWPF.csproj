@@ -162,9 +162,6 @@
     <Compile Include="View\pgEditarPerfil.xaml.cs">
       <DependentUpon>pgEditarPerfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\pgEditarPlano.xaml.cs">
-      <DependentUpon>pgEditarPlano.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\pgEmpresasContratadas.xaml.cs">
       <DependentUpon>pgEmpresasContratadas.xaml</DependentUpon>
     </Compile>
@@ -179,9 +176,6 @@
     </Compile>
     <Compile Include="View\pgExcluirPerfil.xaml.cs">
       <DependentUpon>pgExcluirPerfil.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\pgExcluirPlano.xaml.cs">
-      <DependentUpon>pgExcluirPlano.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\pgListaBeneficio.xaml.cs">
       <DependentUpon>pgListaBeneficio.xaml</DependentUpon>
@@ -227,6 +221,9 @@
     </Compile>
     <Compile Include="View\uclAlterarContratacao.xaml.cs">
       <DependentUpon>uclAlterarContratacao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\uclAlterarPlano.xaml.cs">
+      <DependentUpon>uclAlterarPlano.xaml</DependentUpon>
     </Compile>
     <Page Include="View\frmCadastro.xaml">
       <SubType>Designer</SubType>
@@ -316,10 +313,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\pgEditarPlano.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\pgEmpresasContratadas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -337,10 +330,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgExcluirPerfil.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgExcluirPlano.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -401,6 +390,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\uclAlterarContratacao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\uclAlterarPlano.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -36,15 +36,5 @@ namespace ProjetoPromoWPF.View
         {
             fmPlano.Content = new pgListarPlano(empresa);
         }
-
-        private void BtnAlterar_Click(object sender, RoutedEventArgs e)
-        {
-            fmPlano.Content = new pgEditarPlano();
-        }
-
-        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-            fmPlano.Content = new pgExcluirPlano();
-        }
     }
 }

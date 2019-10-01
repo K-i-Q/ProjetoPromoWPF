@@ -19,11 +19,25 @@
                         </WrapPanel>
                         <WrapPanel>
                             <TextBlock Text="Nível: " />
-                            <TextBlock Text="{Binding Descricao}" />
+                            <TextBlock Text="{Binding Nivel}" />
                         </WrapPanel>
                         <WrapPanel>
                             <TextBlock Text="Descrição: " />
+                            <TextBlock Text="{Binding Descricao}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Preço: " />
                             <TextBlock Text="{Binding Preco}" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Button x:Name="btnEditar"
+                                    Click="BtnEditar_Click"
+                                    Content="Editar"
+                                    />
+                            <Button x:Name="btnExcluir"
+                                    Click="BtnExcluir_Click"
+                                    Content="Excluir"
+                                    />
                         </WrapPanel>
                     </StackPanel>
                 </DataTemplate>

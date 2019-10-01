@@ -26,13 +26,26 @@ namespace ProjetoPromoWPF.View
         public pgListarPlano(Empresa e)
         {
             InitializeComponent();
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
             listarPlanos(empresa);
         }
 
         private void listarPlanos(Empresa empresa)
         {
             listaPlanos.ItemsSource = PlanoDAO.PlanosDaEmpresa(empresa);
+        }
+
+        private void BtnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Plano plano = button.DataContext as Plano;
+            this.Content = new uclAlterarPlano(plano);
+        }
+
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Plano plano = button.DataContext as Plano;
         }
     }
 }

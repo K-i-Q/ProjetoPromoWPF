@@ -50,7 +50,7 @@ namespace ProjetoPromoWPF.View
 
         private void BtnPerfil_Click(object sender, RoutedEventArgs e)
         {
-            fmEmpresa.Content = new pgPerfil();
+            fmEmpresa.Content = new pgPerfil(empresa);
         }
 
         private void BtnBeneficios_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,12 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgExcluirPerfil : Page
     {
-        public pgExcluirPerfil()
+        Empresa empresa;
+        public pgExcluirPerfil(Empresa e)
         {
             InitializeComponent();
+
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
     }
 }

@@ -26,8 +26,8 @@ namespace ProjetoPromoWPF.View
         public pgDetalhesCliente(Cliente c)
         {
             InitializeComponent();
-            carregarCliente(c);
-            cliente = c;
+            cliente = ClienteDAO.FindClientById(c.ClienteId);
+            carregarCliente(cliente);
         }
 
         private void carregarCliente(Cliente c)
@@ -40,7 +40,8 @@ namespace ProjetoPromoWPF.View
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Operação Cancelada!");
+            carregarCliente(cliente);
         }
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)

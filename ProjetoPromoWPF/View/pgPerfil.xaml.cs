@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,24 +22,27 @@ namespace ProjetoPromoWPF.View
     /// </summary>
     public partial class pgPerfil : Page
     {
-        public pgPerfil()
+        Empresa empresa;
+        public pgPerfil(Empresa e)
         {
             InitializeComponent();
+
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
 
         private void BtnVer_Click(object sender, RoutedEventArgs e)
         {
-            fmPerfil.Content = new pgVerPerfil();
+            fmPerfil.Content = new pgVerPerfil(empresa);
         }
 
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
         {
-            fmPerfil.Content = new pgEditarPerfil();
+            fmPerfil.Content = new pgEditarPerfil(empresa);
         }
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
         {
-            fmPerfil.Content = new pgExcluirPerfil();
+            fmPerfil.Content = new pgExcluirPerfil(empresa);
         }
     }
 }

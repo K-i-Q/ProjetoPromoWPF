@@ -9,9 +9,43 @@
       Title="pgVerPerfil">
 
     <Grid>
-        <TextBlock Text="Ver Perfil"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="fmDetalhesDaEmpresa"
+               Grid.Column="2"
+               Grid.Row="1"/>
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1"
+                    >
+            <WrapPanel>
+                <TextBlock Text="CNPJ: " />
+                <TextBlock x:Name="txtCNPJ" Text="{Binding CNPJ}" />
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Razão: " />
+                <TextBlock x:Name="txtRazao" Text="{Binding Razao}" />
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="E-mail: " />
+                <TextBlock x:Name="txtEmail" Text="{Binding Email}" />
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Telefone: " />
+                <TextBlock x:Name="txtTelefone" Text="{Binding Telefone}" />
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Cadastrado em: " />
+                <TextBlock x:Name="txtCriadoEm" Text="{Binding CriadoEm}" />
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Page>

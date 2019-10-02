@@ -37,7 +37,7 @@ namespace ProjetoPromoWPF.View
         {
             Cliente cliente;
             HomeCliente home;
-            string senha = txtSenha.Text;
+            string senha = txtSenha.Password.ToString();
 
             //Encontra cliente por string
             cliente = ClienteDAO.FindClient(txtEmail.Text);

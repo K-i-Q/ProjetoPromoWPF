@@ -48,9 +48,9 @@ namespace ProjetoPromoWPF.View
                         {
                             empresa.Telefone = txtTelefone.Text;
 
-                            if (Validacoes.ValidaSenha(txtSenha.Text))
+                            if (Validacoes.ValidaSenha(txtSenha.Password.ToString()))
                             {
-                                empresa.Senha = txtSenha.Text;
+                                empresa.Senha = txtSenha.Password.ToString();
 
                                 EmpresaDAO.RegisterCompany(empresa);
                                 MessageBox.Show(empresa.Razao + " cadastrada com sucesso!");

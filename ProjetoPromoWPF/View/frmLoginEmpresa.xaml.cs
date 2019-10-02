@@ -37,7 +37,7 @@ namespace ProjetoPromoWPF.View
         {
             HomeEmpresa home;
             Empresa empresa;
-            string senha = txtSenha.Text;
+            string senha = txtSenha.Password.ToString();
 
             empresa = EmpresaDAO.FindCompanyByEmail(txtEmail.Text);
 

@@ -25,6 +25,7 @@ namespace ProjetoPromoWPF.View
         EmpresaEmpresa parceria;
         Empresa empresaUm;
         Empresa empresaDois;
+        Empresa aux;
         public pgCadastrarParceria(Empresa e)
         {
             InitializeComponent();
@@ -34,7 +35,8 @@ namespace ProjetoPromoWPF.View
 
         private void BtnCadastrarParceria_Click(object sender, RoutedEventArgs e)
         {
-            empresaDois = EmpresaDAO.FindCompanyByName(txtNome.Text);
+            aux =  EmpresaDAO.FindCompanyByName(txtNome.Text);
+            empresaDois = EmpresaDAO.FindCompanyById(aux.EmpresaId);
 
             parceria = new EmpresaEmpresa();
 

@@ -48,9 +48,9 @@ namespace ProjetoPromoWPF.View
                             if (Validacoes.ValidaEmail(txtEmail.Text))
                             {
                                 cliente.Email = txtEmail.Text;
-                                if (Validacoes.ValidaSenha(txtSenha.Text))
+                                if (Validacoes.ValidaSenha(txtSenha.Password.ToString()))
                                 {
-                                    cliente.Senha = txtSenha.Text;
+                                    cliente.Senha = txtSenha.Password.ToString();
                                     //TODO
                                     if (Validacoes.ValidaTelefone(txtTelefone.Text))
                                     {

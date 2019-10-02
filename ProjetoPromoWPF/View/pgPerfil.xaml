@@ -20,32 +20,44 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Frame NavigationUIVisibility="Hidden"
-               x:Name="fmPerfil"
+        <Frame x:Name="fmDetalhesDaEmpresa"
                Grid.Column="2"
-               Grid.Row="1"
-               />
-
+               Grid.Row="1"/>
         <StackPanel Grid.Column="1"
                     Grid.Row="1"
                     >
-            <TextBlock Text="Perfil" 
-                       FontSize="20"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,10"
-                       />
-            <Button Content="Ver"
-                    Margin="0,0,0,10"
-                    x:Name="btnVer" Click="BtnVer_Click"
-                    />
-            <Button Content="Editar"
-                    Margin="0,0,0,10"
-                    x:Name="btnEditar" Click="BtnEditar_Click"
-                    />
-            <Button Content="Excluir"
-                    Margin="0,0,0,10"
-                    x:Name="btnExcluir" Click="BtnExcluir_Click"
-                    />
+            <WrapPanel>
+                <TextBlock Text="CNPJ: " />
+                <TextBlock x:Name="txtCNPJ"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Razão: " />
+                <TextBlock x:Name="txtRazao" />
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="E-mail: " />
+                <TextBlock x:Name="txtEmail"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Telefone: " />
+                <TextBlock x:Name="txtTelefone"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Cadastrado em: " />
+                <TextBlock x:Name="txtCriadoEm"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Button x:Name="btnExcluir"
+                        Content="Excluir" 
+                        Margin="10,10,10,0" 
+                        Click="BtnExcluir_Click"
+                        />
+                <Button x:Name="btnEditar"
+                        Content="Editar"
+                        Margin="10,10,10,0" 
+                        Click="BtnEditar_Click"
+                        />
+            </WrapPanel>
         </StackPanel>
     </Grid>
 </Page>

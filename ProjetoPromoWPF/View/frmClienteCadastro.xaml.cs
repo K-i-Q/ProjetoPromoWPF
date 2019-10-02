@@ -103,5 +103,12 @@ namespace ProjetoPromoWPF.View
             
             
         }
+
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastro cadastro = new frmCadastro();
+            cadastro.Show();
+            this.Close();
+        }
     }
 }

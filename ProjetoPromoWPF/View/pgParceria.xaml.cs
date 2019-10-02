@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace ProjetoPromoWPF.View
         {
             InitializeComponent();
 
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
 
         private void BtnCadastrarParceria_Click(object sender, RoutedEventArgs e)

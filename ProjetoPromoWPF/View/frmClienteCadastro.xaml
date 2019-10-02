@@ -59,8 +59,12 @@
                 <TextBlock Text="Telefone:" Margin="0,0,10,10" />
                 <TextBox x:Name="txtTelefone"  Margin="0,0,0,10" MinWidth="150" />
             </WrapPanel>
-            
+
             <Button x:Name="btnCadastrarCliente" Margin="10" Content="Cadastrar" Click="BtnCadastrarCliente_Click"/>
+            <Button x:Name="btnVoltar" 
+                    Margin="10" 
+                    Content="Voltar" 
+                    Click="BtnVoltar_Click"/>
 
         </StackPanel>
     </Grid>

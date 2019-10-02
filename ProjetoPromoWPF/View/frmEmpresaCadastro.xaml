@@ -53,6 +53,10 @@
             </WrapPanel>
 
             <Button x:Name="btnCadastrarEmpresa" Margin="10" Content="Cadastrar" Click="BtnCadastrarEmpresa_Click"/>
+            <Button x:Name="btnVoltar" 
+                    Margin="10" 
+                    Content="Voltar" 
+                    Click="BtnVoltar_Click"/>
 
         </StackPanel>
     </Grid>

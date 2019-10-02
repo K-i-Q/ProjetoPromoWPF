@@ -26,7 +26,7 @@ namespace ProjetoPromoWPF.View
         public HomeEmpresa(Empresa e)
         {
             InitializeComponent();
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
         private void BtnSair_Click(object sender, RoutedEventArgs e)
         {

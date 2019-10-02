@@ -1,4 +1,5 @@
-﻿using ProjetoPromoWPF.Model;
+﻿using ProjetoPromoWPF.DAL;
+using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace ProjetoPromoWPF.View
         public pgPlano(Empresa e)
         {
             InitializeComponent();
-            empresa = e;
+            empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
         }
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {

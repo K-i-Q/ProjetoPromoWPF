@@ -2,6 +2,7 @@
 using ProjetoPromoWPF.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,6 @@ namespace ProjetoPromoWPF.View
         public pgExcluirParceria(Empresa e)
         {
             InitializeComponent();
-
             empresa = EmpresaDAO.FindCompanyById(e.EmpresaId);
 
             carregarParceirosDaEmpresa(empresa);
@@ -44,7 +44,14 @@ namespace ProjetoPromoWPF.View
             EmpresaEmpresa parceria = EmpresaEmpresaDAO.ParceriaDasEmpresas(empresa, parceira); ;
             if (MessageBox.Show("Tem certeza que quer remover a parceria com a empresa "+parceira.Razao+"? Esta operação não pode ser revertida.", "Remoção de parceiro", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                EmpresaEmpresaDAO.RemovePartner(parceria);
+                try
+                {
+                    EmpresaEmpresaDAO.RemovePartner(parceria);
+                }
+                catch (DbUpdateException)
+                {
+                    MessageBox.Show("Você precisa excluir seu benefícios primeiro para depois excluir sua parceria. Faça isso e tente novamente");
+                }
             }
             else
             {

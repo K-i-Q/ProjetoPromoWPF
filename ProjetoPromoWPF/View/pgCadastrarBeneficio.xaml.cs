@@ -38,7 +38,7 @@ namespace ProjetoPromoWPF.View
             beneficio.Nome = txtNome.Text;
             beneficio.Nivel = Convert.ToInt32(txtNivel.Text);
             beneficio.Descricao = txtDescricao.Text;
-            beneficio.Empresa = empresa;
+            beneficio.Empresa = EmpresaDAO.FindCompanyById(empresa.EmpresaId);
             BeneficioDAO.RegisterBenefit(beneficio);
             MessageBox.Show("Beneficio " + beneficio.Nome + " cadastrado para empresa " + beneficio.Empresa.Razao);
         }

@@ -174,9 +174,6 @@
     <Compile Include="View\pgExcluirParceria.xaml.cs">
       <DependentUpon>pgExcluirParceria.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\pgExcluirPerfil.xaml.cs">
-      <DependentUpon>pgExcluirPerfil.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\pgListaBeneficio.xaml.cs">
       <DependentUpon>pgListaBeneficio.xaml</DependentUpon>
     </Compile>
@@ -212,9 +209,6 @@
     </Compile>
     <Compile Include="View\pgPlano.xaml.cs">
       <DependentUpon>pgPlano.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\pgVerPerfil.xaml.cs">
-      <DependentUpon>pgVerPerfil.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\uclAlterarBeneficio.xaml.cs">
       <DependentUpon>uclAlterarBeneficio.xaml</DependentUpon>
@@ -329,10 +323,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\pgExcluirPerfil.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\pgListaBeneficio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -378,10 +368,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\pgPlano.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\pgVerPerfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

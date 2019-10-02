@@ -39,6 +39,7 @@ namespace ProjetoPromoWPF.View
             txtRazao.Text = empresa.Razao;
             txtEmail.Text = empresa.Email;
             txtTelefone.Text = empresa.Telefone;
+            txtResponsavel.Text = empresa.Responsavel;
             txtCriadoEm.Text = empresa.CriadoEm.ToString();
         }
 

@@ -39,6 +39,10 @@
                 <TextBlock x:Name="txtEmail"/>
             </WrapPanel>
             <WrapPanel>
+                <TextBlock Text="Responsável: " />
+                <TextBlock x:Name="txtResponsavel"/>
+            </WrapPanel>
+            <WrapPanel>
                 <TextBlock Text="Telefone: " />
                 <TextBlock x:Name="txtTelefone"/>
             </WrapPanel>

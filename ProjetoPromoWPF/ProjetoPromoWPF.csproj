@@ -86,6 +86,10 @@
     <Compile Include="Migrations\201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.Designer.cs">
       <DependentUpon>201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910020105134_AdicionadoPropriedadeResponsavel.cs" />
+    <Compile Include="Migrations\201910020105134_AdicionadoPropriedadeResponsavel.Designer.cs">
+      <DependentUpon>201910020105134_AdicionadoPropriedadeResponsavel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Beneficio.cs" />
@@ -406,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.resx">
       <DependentUpon>201909261608440_AdicionadoPropriedadeNivelNaClasseEmpresaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020105134_AdicionadoPropriedadeResponsavel.resx">
+      <DependentUpon>201910020105134_AdicionadoPropriedadeResponsavel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,6 +17,7 @@ namespace ProjetoPromoWPF.Model
         public string Razao { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
+        public string Responsavel { get; set; }
         public string Telefone { get; set; }
         public DateTime CriadoEm { get; set; }
 

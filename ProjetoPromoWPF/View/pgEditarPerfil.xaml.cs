@@ -37,6 +37,7 @@ namespace ProjetoPromoWPF.View
             txtRazao.Text = empresa.Razao;
             txtEmail.Text = empresa.Email;
             txtTelefone.Text = empresa.Telefone;
+            txtResponsavel.Text = empresa.Responsavel;
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,7 @@ namespace ProjetoPromoWPF.View
             empresa.Razao = txtRazao.Text;
             empresa.Email = txtEmail.Text;
             empresa.Telefone = txtTelefone.Text;
+            empresa.Responsavel = txtResponsavel.Text;
 
             if (MessageBox.Show("Deseja salvar as alterações feitas em seu cadastro?","Salvar Alterações",MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
             {

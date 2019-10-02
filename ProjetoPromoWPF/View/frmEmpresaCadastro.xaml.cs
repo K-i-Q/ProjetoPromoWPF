@@ -51,7 +51,7 @@ namespace ProjetoPromoWPF.View
                             if (Validacoes.ValidaSenha(txtSenha.Password.ToString()))
                             {
                                 empresa.Senha = txtSenha.Password.ToString();
-
+                                empresa.Responsavel = txtResponsavel.Text;
                                 EmpresaDAO.RegisterCompany(empresa);
                                 MessageBox.Show(empresa.Razao + " cadastrada com sucesso!");
 

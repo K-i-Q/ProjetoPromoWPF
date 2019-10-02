@@ -44,6 +44,10 @@
                 <TextBox x:Name="txtEmail"  Margin="0,0,0,10" MinWidth="150" />
             </WrapPanel>
             <WrapPanel>
+                <TextBlock Text="Responsável:" Margin="0,0,10,10" />
+                <TextBox x:Name="txtResponsavel"  Margin="0,0,0,10" MinWidth="150" />
+            </WrapPanel>
+            <WrapPanel>
                 <TextBlock Text="Senha:" Margin="0,0,10,10" />
                 <PasswordBox x:Name="txtSenha"  Margin="0,0,0,10" MinWidth="150" />
             </WrapPanel>
